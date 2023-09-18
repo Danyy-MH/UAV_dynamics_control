@@ -1,0 +1,1613 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="06/23/22||07:41:17" using="Simscape Multibody Link Version 7.2" from="SolidWorks 28.3.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="Hexa_Payload_June22" uid="Hexa_Payload_June22" version="134">
+<AssemblyFile name="Hexa_Payload_June22.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="APC 8X3.8 Slow Flyer-2" uid="APC 8X3.8 Slow Flyer-2" entityUid="APC 8X3.8 Slow Flyer*:*Valor predeterminado">
+<Transform>
+<Rotation>-0.74464904140667321 0.29679419990226202 0.59783861370481839 0.65730159201691041 0.17043525780377861 0.73410247243105975 0.11598457769961436 0.93960897494741702 -0.32199775144262494</Rotation>
+<Translation>-0.12937959622978598 0.22918437609590442 0.68875856145424486</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Diffuse r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Specular r="0.040784314333223826" g="0.040784314333223826" b="0.040784314333223826" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="APC 8X3.8 Slow Flyer-3" uid="APC 8X3.8 Slow Flyer-3" entityUid="APC 8X3.8 Slow Flyer*:*Valor predeterminado">
+<Transform>
+<Rotation>-0.95791712764001025 -0.00089752107251228662 0.28704350023966185 0.27005378246748285 -0.34175967499082127 0.90015069800849123 0.097291989130235318 0.93978695405187063 0.32761982517086724</Rotation>
+<Translation>-0.27217540367838244 -0.018080672305562349 0.6887636923900301</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Diffuse r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Specular r="0.040784314333223826" g="0.040784314333223826" b="0.040784314333223826" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="APC 8X3.8 Slow Flyer-4" uid="APC 8X3.8 Slow Flyer-4" entityUid="APC 8X3.8 Slow Flyer*:*Valor predeterminado">
+<Transform>
+<Rotation>-0.96503545283278125 8.7320589707694241e-05 0.26211937576406574 0.2462852316736078 -0.34199491542647531 0.90685338532858517 0.089722680718457515 0.93970179854970626 0.33001571230343135</Rotation>
+<Translation>0.26661656682602169 -0.018069640179444468 0.68875869184098637</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Diffuse r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Specular r="0.040784314333223826" g="0.040784314333223826" b="0.040784314333223826" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="APC 8X3.8 Slow Flyer-5" uid="APC 8X3.8 Slow Flyer-5" entityUid="APC 8X3.8 Slow Flyer*:*Valor predeterminado">
+<Transform>
+<Rotation>-0.4887217680709835 -0.2960195113680763 0.82068476426882531 0.81796175871775478 0.17172899409524756 0.54904254285291232 -0.30346267429278584 0.93961779542345825 0.15820494251012113</Rotation>
+<Translation>-0.14555041421013293 -0.2373523461250521 0.68875857368478255</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Diffuse r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Specular r="0.040784314333223826" g="0.040784314333223826" b="0.040784314333223826" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Hexacopter_Junio2022-1" uid="Hexacopter_Junio2022-1" grounded="true" entityUid="Hexacopter_Junio2022" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.016900902042137622 0.00025721299921306097 0.41525967152862059</Translation>
+</Transform>
+<Instance name="Top_Plate_S550-1" uid="Top_Plate_S550-1" entityUid="Top_Plate_S550*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 -3.4914813388431334e-15 -1 0 1 -3.4914813388431334e-15</Rotation>
+<Translation>-0.019401885342330394 -0.0088613756561451845 0.22127500000000005</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Arm-4" uid="Arm-4" entityUid="Arm*:*Predeterminado">
+<Transform>
+<Rotation>-0.50000000000000233 -2.2122150201198284e-16 0.86602540378443738 0.86602540378443738 -3.1083144576316776e-15 0.50000000000000233 2.5812685322534874e-15 1 1.7457406694215722e-15</Rotation>
+<Translation>0.027677032733787868 -0.091046683550603053 0.22127499999999972</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.20862745098039215" g="0.20862745098039215" b="0.20862745098039215" a="1"/>
+<Specular r="0.014901960784313726" g="0.014901960784313726" b="0.014901960784313726" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="S550_UP_Plate-1" uid="S550_UP_Plate-1" grounded="true" entityUid="S550_UP_Plate*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 -3.4914813388431334e-15 -1 0 1 -3.4914813388431334e-15</Rotation>
+<Translation>-0.019656532116963776 -0.0090092438869403147 0.20122500000000004</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Arm-1" uid="Arm-1" entityUid="Arm*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 -3.4914813388431334e-15 -1 0 1 -3.4914813388431334e-15</Rotation>
+<Translation>-0.11389326230987919 -0.0089992543829887483 0.22127500000000005</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.20862745098039215" g="0.20862745098039215" b="0.20862745098039215" a="1"/>
+<Specular r="0.014901960784313726" g="0.014901960784313726" b="0.014901960784313726" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Arm-2" uid="Arm-2" entityUid="Arm*:*Predeterminado">
+<Transform>
+<Rotation>0.500000000000001 2.7837885906933682e-16 -0.86602540378443815 -0.86602540378443815 -3.9736476665042787e-15 -0.500000000000001 -3.5804692544161267e-15 1 -1.7457406694215698e-15</Rotation>
+<Translation>-0.066778455054812197 0.072600104309019614 0.22127500000000028</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.69411764705882351" g="0.098039215686274508" b="0.098039215686274508" a="1"/>
+<Diffuse r="0.69411764705882351" g="0.098039215686274508" b="0.098039215686274508" a="1"/>
+<Specular r="0.20823530239217422" g="0.029411765874600877" b="0.029411765874600877" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Arm-3" uid="Arm-3" entityUid="Arm*:*Predeterminado">
+<Transform>
+<Rotation>0.50000000000000067 2.7673265324324303e-16 0.86602540378443837 0.86602540378443837 -3.0121663233124964e-15 -0.50000000000000067 2.4702462297909705e-15 1 -1.7457406694215688e-15</Rotation>
+<Translation>-0.066817962127145025 -0.090595782664054159 0.22127499999999972</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.20862745098039215" g="0.20862745098039215" b="0.20862745098039215" a="1"/>
+<Specular r="0.014901960784313726" g="0.014901960784313726" b="0.014901960784313726" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Arm-5" uid="Arm-5" entityUid="Arm*:*Predeterminado">
+<Transform>
+<Rotation>-1 0 -6.9829626776862667e-15 -6.9829626776862667e-15 3.4914813388431334e-15 1 0 1 -3.4914813388431334e-15</Rotation>
+<Translation>0.07458019807312935 -0.009000580824482388 0.2212749999999612</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.20862745098039215" g="0.20862745098039215" b="0.20862745098039215" a="1"/>
+<Specular r="0.014901960784313726" g="0.014901960784313726" b="0.014901960784313726" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Arm-6" uid="Arm-6" entityUid="Arm*:*Predeterminado">
+<Transform>
+<Rotation>-0.50000000000000333 -2.7837885906933958e-16 -0.86602540378443682 -0.86602540378443682 -3.9736476665042818e-15 0.50000000000000333 -3.5804692544161298e-15 1 1.7457406694215777e-15</Rotation>
+<Translation>0.027429783757385529 0.072620662056715912 0.22127500000000028</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.69411764705882351" g="0.098039215686274508" b="0.098039215686274508" a="1"/>
+<Diffuse r="0.69411764705882351" g="0.098039215686274508" b="0.098039215686274508" a="1"/>
+<Specular r="0.20823530239217422" g="0.029411765874600877" b="0.029411765874600877" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Base1-1" uid="Base1-1" entityUid="Base1*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.051274615138601549 -0.05804621649697065 0.222825000000135</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.30000001192092896" g="0.30000001192092896" b="0.30000001192092896" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Rubber-1" uid="Rubber-1" entityUid="Rubber*:*Predeterminado">
+<Transform>
+<Rotation>-0.51122861579886247 -0.48851337387012905 -0.70710677124349663 -0.69086238654985532 0.72298628123263253 2.1789723453347065e-07 0.51122838853003605 0.48851358292214631 -0.70710679112956476</Rotation>
+<Translation>-0.067076107235566423 -0.0089042655891752517 0.23136680451010433</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="ESC-4" uid="ESC-4" entityUid="ESC*:*Predeterminado">
+<Transform>
+<Rotation>-0.49471304576433967 0.86602540378443815 0.072518979243858389 -0.85686813043098209 -0.50000000000000089 0.12560655656339184 0.14503795848771356 -1.7334547497396934e-15 0.98942609152867811</Rotation>
+<Translation>-0.092126601168384781 -0.13485074303591152 0.2051726585102312</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="0.93725490196078431" b="0.13725490196078433" a="1"/>
+<Diffuse r="0.69999999999999996" g="0.65607843137254895" b="0.096078431372549025" a="1"/>
+<Specular r="0.050000000000000003" g="0.04686274509803922" b="0.0068627450980392165" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="ESC-2" uid="ESC-2" entityUid="ESC*:*Predeterminado">
+<Transform>
+<Rotation>-0.49471304576433967 -0.86602540378443815 0.072518979243858792 0.85686813043098109 -0.50000000000000089 -0.12560655656339856 0.14503795848771958 -1.3176905723929522e-15 0.98942609152867722</Rotation>
+<Translation>-0.092068678940123397 0.11686569667610959 0.20517265851023209</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="0.93725490196078431" b="0.13725490196078433" a="1"/>
+<Diffuse r="0.69999999999999996" g="0.65607843137254895" b="0.096078431372549025" a="1"/>
+<Specular r="0.050000000000000003" g="0.04686274509803922" b="0.0068627450980392165" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="ESC-3" uid="ESC-3" entityUid="ESC*:*Predeterminado">
+<Transform>
+<Rotation>-0.98942609152849736 0 0.14503795848894807 -5.0639732548805768e-16 -1 -3.4545627347362473e-15 0.14503795848894807 -3.4914813388431337e-15 0.98942609152849736</Rotation>
+<Translation>-0.16487350175614612 -0.0090753350816491409 0.20517265851022276</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="0.93725490196078431" b="0.13725490196078433" a="1"/>
+<Diffuse r="0.69999999999999996" g="0.65607843137254895" b="0.096078431372549025" a="1"/>
+<Specular r="0.050000000000000003" g="0.04686274509803922" b="0.0068627450980392165" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Rubber-3" uid="Rubber-3" entityUid="Rubber*:*Predeterminado">
+<Transform>
+<Rotation>-0.64351070611493544 -0.29307600023552899 0.70710708467770389 -0.41447231882455715 0.910061919282521 -9.5150928219878139e-08 -0.64351120273360574 -0.29307637427428157 -0.70710647769525437</Rotation>
+<Translation>0.027896888742119499 -0.0086794068550362438 0.2312561872776932</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="CaseB-2" uid="CaseB-2" entityUid="CaseB*:*Predeterminado">
+<Transform>
+<Rotation>-0.99999999999999922 4.5455082269864041e-15 4.0085716722420452e-08 -9.3093948259235584e-15 -0.99999999999999289 -1.1917244900679535e-07 4.0085716722419625e-08 -1.1917244900679563e-07 0.99999999999999212</Rotation>
+<Translation>0.011447940114702276 0.046449261689445166 0.25227945407809788</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.30000001192092896" g="0.30000001192092896" b="0.30000001192092896" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Raspberry Pi 4 Model B.STEP-1" uid="Raspberry Pi 4 Model B.STEP-1" entityUid="Raspberry Pi 4 Model B.STEP" rigid="true">
+<Transform>
+<Rotation>-4.6215654813210382e-15 4.0085716722420605e-08 0.99999999999999922 0.99999999999999289 -1.1917244932824101e-07 9.3986785085930707e-15 1.1917244905068552e-07 0.99999999999999223 -4.0085716722419764e-08</Rotation>
+<Translation>-0.019456500947003325 0.001320394006818138 0.25807944982704795</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.30000001192092896" g="0.30000001192092896" b="0.30000001192092896" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+<Instance name="Female Micro HDMI Connector, RPi4ModelB.STEP-2" uid="Female Micro HDMI Connector, RPi4ModelB.STEP-2" grounded="true" entityUid="Female Micro HDMI Connector, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.016500000000000001 0.00080000000000002292 0.027387499999999999</Translation>
+</Transform>
+</Instance>
+<Instance name="Female USB Type C Connector, RPi4ModelB.STEP-1" uid="Female USB Type C Connector, RPi4ModelB.STEP-1" grounded="true" entityUid="Female USB Type C Connector, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.031300000000000001 0.00080000000000002292 0.026541865899999999</Translation>
+</Transform>
+</Instance>
+<Instance name="2X USB3.0 PORTS, RPi4ModelB.STEP-1" uid="2X USB3.0 PORTS, RPi4ModelB.STEP-1" grounded="true" entityUid="2X USB3.0 PORTS, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.037069999999999992 0.00080000000000002292 0.001</Translation>
+</Transform>
+</Instance>
+<Instance name="PCB, RPi4ModelB.STEP-1" uid="PCB, RPi4ModelB.STEP-1" grounded="true" entityUid="PCB, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Female Micro HDMI Connector, RPi4ModelB.STEP-1" uid="Female Micro HDMI Connector, RPi4ModelB.STEP-1" grounded="true" entityUid="Female Micro HDMI Connector, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.0030000000000000001 0.00080000000000002292 0.027387499999999999</Translation>
+</Transform>
+</Instance>
+<Instance name="91D77 D9WHV 778K, 4 GB LPDDR4 SDRAM, RPi4ModelB.STEP-1" uid="91D77 D9WHV 778K, 4 GB LPDDR4 SDRAM, RPi4ModelB.STEP-1" grounded="true" entityUid="91D77 D9WHV 778K, 4 GB LPDDR4 SDRAM, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.0022499999999999994 0.00080000000000002292 -0.0045000000000000005</Translation>
+</Transform>
+</Instance>
+<Instance name="Cypress CYW43455 Wireless Module Cover, RPi4ModelB.STEP-1" uid="Cypress CYW43455 Wireless Module Cover, RPi4ModelB.STEP-1" grounded="true" entityUid="Cypress CYW43455 Wireless Module Cover, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.030499999999999999 0.00080000000000002292 -0.014500000000000001</Translation>
+</Transform>
+</Instance>
+<Instance name="Gigabit Ethernet Port, RPi4ModelB.STEP-1" uid="Gigabit Ethernet Port, RPi4ModelB.STEP-1" grounded="true" entityUid="Gigabit Ethernet Port, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>0 -2.7755575615628914e-16 1 0 1.0000000000000002 -2.7755575615628914e-16 -1 0 0</Rotation>
+<Translation>0.045499999999999992 0.0075499999999999456 -0.017749999999999995</Translation>
+</Transform>
+</Instance>
+<Instance name="SD Card Slot, RPi4ModelB.STEP-1" uid="SD Card Slot, RPi4ModelB.STEP-1" grounded="true" entityUid="SD Card Slot, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>0 2.7755575615628914e-16 -1 0 -1.0000000000000002 2.7755575615628914e-16 -1 0 0</Rotation>
+<Translation>-0.035299999999999998 -0.00080000000000002292 0</Translation>
+</Transform>
+</Instance>
+<Instance name="VIA VL805 PCIe USB 3.0 controller, RPi4ModelB.STEP-1" uid="VIA VL805 PCIe USB 3.0 controller, RPi4ModelB.STEP-1" grounded="true" entityUid="VIA VL805 PCIe USB 3.0 controller, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.017500000000000002 0.00080000000000002292 0.0040000000000000001</Translation>
+</Transform>
+</Instance>
+<Instance name="Display Connector, RPi4ModelB.STEP-1" uid="Display Connector, RPi4ModelB.STEP-1" grounded="true" entityUid="Display Connector, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>0 -2.7755575615628914e-16 -1 0 1.0000000000000002 2.7755575615628914e-16 1 0 0</Rotation>
+<Translation>-0.0385 0.00080000000000002292 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Broadcom BCM2711B0 CPU, RPi4ModelB.STEP-1" uid="Broadcom BCM2711B0 CPU, RPi4ModelB.STEP-1" grounded="true" entityUid="Broadcom BCM2711B0 CPU, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.013249999999999998 0.00080000000000002292 -0.0045000000000000005</Translation>
+</Transform>
+</Instance>
+<Instance name="2.54 mm DUPONT MALE PIN HEADER, POE, 2X2, RPi4ModelB.STEP-1" uid="2.54 mm DUPONT MALE PIN HEADER, POE, 2X2, RPi4ModelB.STEP-1" grounded="true" entityUid="2.54 mm DUPONT MALE PIN HEADER, POE, 2X2, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.019 0.00080000000000002292 -0.018360000000000001</Translation>
+</Transform>
+</Instance>
+<Instance name="2.54 mm DUPONT MALE PIN HEADER, IO, 2X20, RPi4ModelB.STEP-1" uid="2.54 mm DUPONT MALE PIN HEADER, IO, 2X20, RPi4ModelB.STEP-1" grounded="true" entityUid="2.54 mm DUPONT MALE PIN HEADER, IO, 2X20, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.01 0.00080000000000002292 -0.024500000000000008</Translation>
+</Transform>
+</Instance>
+<Instance name="Camera Connector, RPi4ModelB.STEP-1" uid="Camera Connector, RPi4ModelB.STEP-1" grounded="true" entityUid="Camera Connector, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>0 -2.7755575615628914e-16 1 0 1.0000000000000002 -2.7755575615628914e-16 -1 0 0</Rotation>
+<Translation>0.0039999999999999992 0.00080000000000002292 0.016500000000000001</Translation>
+</Transform>
+</Instance>
+<Instance name="Microphone Plug, RPi4ModelB.STEP-1" uid="Microphone Plug, RPi4ModelB.STEP-1" grounded="true" entityUid="Microphone Plug, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.011499999999999998 0.00080000000000002292 0.021649999999999999</Translation>
+</Transform>
+</Instance>
+<Instance name="Broadcom BCM54213PE Gigabit Ethernet Transceiver, RPi4ModelB.STEP-1" uid="Broadcom BCM54213PE Gigabit Ethernet Transceiver, RPi4ModelB.STEP-1" grounded="true" entityUid="Broadcom BCM54213PE Gigabit Ethernet Transceiver, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.016500000000000001 0.00080000000000002292 -0.01</Translation>
+</Transform>
+</Instance>
+<Instance name="2X USB2.0 PORTS, RPi4ModelB.STEP-1" uid="2X USB2.0 PORTS, RPi4ModelB.STEP-1" grounded="true" entityUid="2X USB2.0 PORTS, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.037064999999999994 0.00065000000000003944 0.019</Translation>
+</Transform>
+</Instance>
+<Instance name="MxL7704 Universal PMIC, RPi4ModelB.STEP-1" uid="MxL7704 Universal PMIC, RPi4ModelB.STEP-1" grounded="true" entityUid="MxL7704 Universal PMIC, RPi4ModelB.STEP*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.032500000000000001 0.00080000000000002292 0.015999999999999997</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="CaseT-1" uid="CaseT-1" entityUid="CaseT*:*Predeterminado">
+<Transform>
+<Rotation>-0.99999999999999922 4.5455082269864041e-15 4.0085716722420452e-08 -9.3093948259235584e-15 -0.99999999999999289 -1.1917244900679534e-07 4.0085716722419625e-08 -1.1917244900679562e-07 0.99999999999999212</Rotation>
+<Translation>0.011371233357403546 0.046530691920233527 0.25227945409087699</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.30000001192092896" g="0.30000001192092896" b="0.30000001192092896" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Leveled_Base_1_3_5_Mod-6" uid="Leveled_Base_1_3_5_Mod-6" entityUid="Leveled_Base_1_3_5_Mod*:*Predeterminado">
+<Transform>
+<Rotation>0.86598633125333024 -0.50006766945265702 7.1123460716938737e-06 0.5000676694357945 0.86598633128253732 4.1066854293754562e-06 -8.2128150932809176e-06 3.2087571341988886e-10 0.99999999996627476</Rotation>
+<Translation>0.11524374074386401 -0.24271809772969474 0.23650525516739135</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Specular r="0.19411765477236581" g="0.18588236032747754" b="0.18000000715255737" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Rubber-2" uid="Rubber-2" entityUid="Rubber*:*Predeterminado">
+<Transform>
+<Rotation>-0.99032656510953321 0.13875624107880358 -1.8617395133868619e-07 0.098115596710557862 0.70026652115759624 -0.70710687242309367 -0.098115361287032313 -0.70026673839867548 -0.70710668994996539</Rotation>
+<Translation>-0.01956040976333287 -0.056053476040459869 0.23123180128642512</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Leveled_Base_1_3_5_Mod-4" uid="Leveled_Base_1_3_5_Mod-4" entityUid="Leveled_Base_1_3_5_Mod*:*Predeterminado">
+<Transform>
+<Rotation>-0.86501862707675936 -0.50173971476813317 0.00018285139028478378 0.50173970361029985 -0.86501864640269321 -0.00010581446471045911 0.00021126118145916258 2.1231937752501545e-07 0.99999997768433402</Rotation>
+<Translation>0.11499047042135588 0.224316886074271 0.23650719699728712</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Specular r="0.19411765477236581" g="0.18588236032747754" b="0.18000000715255737" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="A2212Motor-1" uid="A2212Motor-1" entityUid="A2212Motor*:*Default">
+<Transform>
+<Rotation>0.50173971476813062 -0.2956819707100104 0.81291415956510393 0.86501864640269444 0.17150565226930958 -0.47151728771629242 -2.1231937855081817e-07 0.93976485539560561 0.34182161511997999</Rotation>
+<Translation>0.11499370445319013 0.22431501301852511 0.24787716155313794</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Leveled_Base_2_4_6_Mod-1" uid="Leveled_Base_2_4_6_Mod-1" entityUid="Leveled_Base_2_4_6_Mod*:*Predeterminado">
+<Transform>
+<Rotation>0.00025531773630441888 0.99999996740642627 -3.4256485072533044e-09 -0.99999996704636829 0.00025531773630441693 2.6834975420615004e-05 2.6834975420596075e-05 -3.4257967838103976e-09 0.99999999963994202</Rotation>
+<Translation>0.2497132840895479 -0.0090029121186840557 0.23650509056976549</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Specular r="0.19411765477236581" g="0.18588236032747754" b="0.18000000715255737" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Leveled_Base_2_4_6_Mod-3" uid="Leveled_Base_2_4_6_Mod-3" entityUid="Leveled_Base_2_4_6_Mod*:*Predeterminado">
+<Transform>
+<Rotation>-0.86498306947352144 -0.50180101005481081 -0.0001892937845164448 0.50180099809638967 -0.86498309018611441 0.00010955157365486024 -0.00021870901299716187 -2.2755355815782335e-07 0.99999997608315772</Rotation>
+<Translation>-0.15437840346535522 -0.2422928730744924 0.23650726296652252</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Specular r="0.19411765477236581" g="0.18588236032747754" b="0.18000000715255737" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="A2212Motor-2" uid="A2212Motor-2" entityUid="A2212Motor*:*Default">
+<Transform>
+<Rotation>0.49798419388378606 0.29679419990226164 -0.81481589671918653 -0.86718610611669467 0.17043525780377788 -0.46791033356352024 2.8434396565080178e-07 0.93960897494741724 0.34224987099805171</Rotation>
+<Translation>-0.15437353811763294 0.22427970255678209 0.24787745636614206</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Leveled_Base_1_3_5_Mod-5" uid="Leveled_Base_1_3_5_Mod-5" entityUid="Leveled_Base_1_3_5_Mod*:*Predeterminado">
+<Transform>
+<Rotation>-0.00262517110059232 0.99999655423234401 3.6216477493094105e-07 -0.99999651616729224 -0.00262517110059232 0.00027591660096574648 0.000275916600965748 3.6216477380907805e-07 0.99999996193494844</Rotation>
+<Translation>-0.28905183957083497 -0.0090231908698510492 0.23650776984391403</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Specular r="0.19411765477236581" g="0.18588236032747754" b="0.18000000715255737" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="ESC-5" uid="ESC-5" entityUid="ESC*:*Predeterminado">
+<Transform>
+<Rotation>0.49471304576434139 0.86602540378443715 -0.072518979243858514 -0.85686813043098109 0.50000000000000255 0.12560655656339156 0.14503795848771336 1.6982318166257968e-15 0.98942609152867811</Rotation>
+<Translation>0.053142485466866785 -0.13521110749526444 0.2051726585102312</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="0.93725490196078431" b="0.13725490196078433" a="1"/>
+<Diffuse r="0.69999999999999996" g="0.65607843137254895" b="0.096078431372549025" a="1"/>
+<Specular r="0.050000000000000003" g="0.04686274509803922" b="0.0068627450980392165" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="ESC-1" uid="ESC-1" entityUid="ESC*:*Predeterminado">
+<Transform>
+<Rotation>0.98942609152847349 1.3877787807814445e-15 -0.14503795848911011 -1.879501860463363e-15 1 -3.2532821335370325e-15 0.14503795848911011 3.4914813388430478e-15 0.98942609152847349</Rotation>
+<Translation>0.12556043751971957 -0.0089981560581993032 0.20517265851010497</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="0.93725490196078431" b="0.13725490196078433" a="1"/>
+<Diffuse r="0.69999999999999996" g="0.65607843137254895" b="0.096078431372549025" a="1"/>
+<Specular r="0.050000000000000003" g="0.04686274509803922" b="0.0068627450980392165" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="ESC-6" uid="ESC-6" entityUid="ESC*:*Predeterminado">
+<Transform>
+<Rotation>0.49471304576434189 -0.86602540378443682 -0.072518979243858722 0.85686813043097976 0.50000000000000311 -0.12560655656339856 0.14503795848771953 1.7279201192545691e-15 0.98942609152867722</Rotation>
+<Translation>0.052952705629174618 0.116751906178673 0.20517265851023209</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="0.93725490196078431" b="0.13725490196078433" a="1"/>
+<Diffuse r="0.69999999999999996" g="0.65607843137254895" b="0.096078431372549025" a="1"/>
+<Specular r="0.050000000000000003" g="0.04686274509803922" b="0.0068627450980392165" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="A2212Motor-3" uid="A2212Motor-3" entityUid="A2212Motor*:*Default">
+<Transform>
+<Rotation>0.99999655423234401 -0.00089752107251248048 -0.0024669777791727354 -0.0026251711005899625 -0.3417596749908216 -0.93978371608943112 3.6216477469763753e-07 0.93978695405187018 -0.34176085351276908</Rotation>
+<Translation>-0.28905183194776929 -0.0090187184603147605 0.24787773413436348</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Rubber-4" uid="Rubber-4" entityUid="Rubber*:*Predeterminado">
+<Transform>
+<Rotation>-0.78027883478986926 -0.62543180281971689 -8.0169399577223466e-07 -0.4422459603921185 0.55173816589481806 0.7071092608726568 -0.44224817749292838 0.55174274468877338 -0.707104301491288</Rotation>
+<Translation>-0.019445838021463459 0.038795795188435879 0.2312674734525681</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Base2-1" uid="Base2-1" entityUid="Base2*:*Predeterminado">
+<Transform>
+<Rotation>0.99999999999999212 -1.1917244034122173e-07 -4.0085716722420452e-08 -1.1917243560502132e-07 -0.9999999999999859 1.1917244900679537e-07 -4.0085730802858431e-08 -1.1917244427059532e-07 -0.99999999999999212</Rotation>
+<Translation>-0.051273215577678194 0.040450225739789542 0.25227945587740036</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.30000001192092896" g="0.30000001192092896" b="0.30000001192092896" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Leveled_Base_2_4_6_Mod-2" uid="Leveled_Base_2_4_6_Mod-2" entityUid="Leveled_Base_2_4_6_Mod*:*Predeterminado">
+<Transform>
+<Rotation>0.8671860802348712 -0.4979841938837864 0.00021186976028889291 0.49798417894090868 0.86718610611669444 0.00012199473100016801 -0.00024448196020399049 -2.8434396547958381e-07 0.9999999701142448</Rotation>
+<Translation>-0.1543747891574053 0.22427898041535305 0.23650749128783116</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.59999999999999998" a="1"/>
+<Specular r="0.19411765477236581" g="0.18588236032747754" b="0.18000000715255737" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="A2212Motor-4" uid="A2212Motor-4" entityUid="A2212Motor*:*Default">
+<Transform>
+<Rotation>0.50180101005480993 -0.29601951136807653 0.81275346520170444 0.86498309018611519 0.17172899409524689 -0.47150122616925788 2.2755355780224029e-07 0.93961779542345836 0.34222565439123409</Rotation>
+<Translation>-0.15437940075864515 -0.24229229750774448 0.24787722807828688</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="NAVIO2-1" uid="NAVIO2-1" entityUid="NAVIO2*:*Predeterminado">
+<Transform>
+<Rotation>8.0150271699441338e-15 4.0085716722420605e-08 -0.99999999999999922 -0.99999999999999301 -1.1917244932824101e-07 -1.2711816674277939e-14 -1.1917244932824143e-07 0.99999999999999223 4.0085716722419367e-08</Rotation>
+<Translation>-0.019496964451588883 -0.0086602959199293811 0.26832944863924663</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.30000001192092896" g="0.30000001192092896" b="0.30000001192092896" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="PortaBat2-1" uid="PortaBat2-1" entityUid="PortaBat2*:*Predeterminado">
+<Transform>
+<Rotation>-2.7755575615628475e-16 -1 0 -1 1.6653345369376643e-16 3.524377748423741e-15 -3.5243777484237414e-15 0 -0.99999999999999989</Rotation>
+<Translation>-0.020372179645937391 -0.0060967577655506111 0.20122499999999993</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="0.69999999999999996" g="0.69999999999999996" b="0.69999999999999996" a="1"/>
+<Specular r="0.050000000000000003" g="0.050000000000000003" b="0.050000000000000003" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Landing_leg-1" uid="Landing_leg-1" entityUid="Landing_leg*:*Predeterminado">
+<Transform>
+<Rotation>0.49999999999999939 0 0.86602540378443904 0.86602540378443904 -3.4929069949083879e-15 -0.49999999999999939 3.0253577421035512e-15 1 -1.7457406694215647e-15</Rotation>
+<Translation>-0.11573377863810994 -0.1650926600687676 0.057931741858833929</Translation>
+</Transform>
+</Instance>
+<Instance name="A2212Motor-6" uid="A2212Motor-6" entityUid="A2212Motor*:*Default">
+<Transform>
+<Rotation>-0.99999996740642616 8.7320589707773536e-05 -0.00023992136440169747 -0.00025531773630429468 -0.34199491542647542 0.9397017679217653 3.4257968027736567e-09 0.93970179854970615 0.34199492657413422</Rotation>
+<Translation>0.24971328370968487 -0.0090012717539265843 0.24787505562150652</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Landing_leg-4" uid="Landing_leg-4" entityUid="Landing_leg*:*Predeterminado">
+<Transform>
+<Rotation>-0.500000000000002 0 -0.86602540378443738 -0.86602540378443738 -3.40893497829362e-15 0.500000000000002 -2.9283895016138196e-15 1 1.7457505554408008e-15</Rotation>
+<Translation>0.076401182415634955 0.14708544909373361 0.05793174185883504</Translation>
+</Transform>
+</Instance>
+<Instance name="Landing_leg-5" uid="Landing_leg-5" entityUid="Landing_leg*:*Predeterminado">
+<Transform>
+<Rotation>-0.50000000000000111 0 0.86602540378443793 0.86602540378443793 -3.489014725685716e-15 0.50000000000000111 3.0461016028963636e-15 1 1.7020267101379337e-15</Rotation>
+<Translation>0.067480750439516984 -0.1702541506703128 0.057931741858833929</Translation>
+</Transform>
+</Instance>
+<Instance name="A2212Motor-5" uid="A2212Motor-5" entityUid="A2212Motor*:*Default">
+<Transform>
+<Rotation>0.50006766945265702 0.29619145255244916 -0.81375853261459485 -0.86598633128253732 0.17103707499495469 -0.46990849429328474 -3.2087565937644058e-10 0.93968981180602384 0.34202786083586745</Rotation>
+<Translation>0.11524266530095181 -0.2427187187532143 0.2478752202696401</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Diffuse r="0.29803921568627451" g="0.29803921568627451" b="0.29803921568627451" a="1"/>
+<Specular r="0.089411768258786661" g="0.089411768258786661" b="0.089411768258786661" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Landing_leg-3" uid="Landing_leg-3" entityUid="Landing_leg*:*Predeterminado">
+<Transform>
+<Rotation>0.49999999999999983 0 -0.86602540378443893 -0.86602540378443893 -3.4929069949083887e-15 -0.49999999999999983 -3.0253577421035516e-15 1 -1.7457406694215663e-15</Rotation>
+<Translation>-0.10680361075140686 0.15223000712818455 0.057931741858835151</Translation>
+</Transform>
+</Instance>
+<Instance name="Turnigy 3300mAh 4S-1" uid="Turnigy 3300mAh 4S-1" entityUid="Turnigy 3300mAh 4S*:*Default">
+<Transform>
+<Rotation>2.7755575615628559e-16 0 -1 1 3.5243777484237399e-15 2.7755575615628519e-16 3.5243777484237406e-15 -1 0</Rotation>
+<Translation>-0.021270992643757442 -0.0073967577655505122 0.17426909038928357</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="APC 8X3.8 Slow Flyer-6" uid="APC 8X3.8 Slow Flyer-6" entityUid="APC 8X3.8 Slow Flyer*:*Valor predeterminado">
+<Transform>
+<Rotation>0.62842495956671696 0.29619145255244916 -0.71927233620405562 -0.77578812729235569 0.17103707499495477 -0.60737064510016481 -0.056875757100806563 0.93968981180602396 0.33726577923378109</Rotation>
+<Translation>0.14022017136114251 -0.23779763475017585 0.68875852963234752</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Diffuse r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Specular r="0.040784314333223826" g="0.040784314333223826" b="0.040784314333223826" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="APC 8X3.8 Slow Flyer-1" uid="APC 8X3.8 Slow Flyer-1" entityUid="APC 8X3.8 Slow Flyer*:*Valor predeterminado">
+<Transform>
+<Rotation>-0.6198537531200069 -0.29568197071001046 0.72687928636059396 0.71409379279745833 0.17150565226931083 0.67871633715995006 -0.3253480902528586 0.93976485539560528 0.10483623768571124</Rotation>
+<Translation>0.12383189512360303 0.22924887427446611 0.6887625172185049</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Diffuse r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Specular r="0.040784314333223826" g="0.040784314333223826" b="0.040784314333223826" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Payload-1" uid="Payload-1" entityUid="Payload*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.0026880245031618427 -0.0083221628997933728 -0.44451532847137937</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="0.93725490196078431" b="0.13725490196078433" a="1"/>
+<Diffuse r="1" g="0.93725490196078431" b="0.13725490196078433" a="1"/>
+<Specular r="0.5" g="0.46862745098039216" b="0.068627450980392163" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Clamp-1" uid="Clamp-1" entityUid="Clamp*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.0026880245031618405 -0.0083221628997933693 0.55548467152862058</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concéntrica1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-1</Uid>
+</InstancePath>
+<Position>0 0.035499999999999976 0</Position>
+<Axis>0 -0.99999999999999978 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1.1102230246251565e-16 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-1</Uid>
+</InstancePath>
+<Position>0 0.026000000000000023 0</Position>
+<Axis>0 0.99999999999999978 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-1</Uid>
+</InstancePath>
+<Position>0 -0.0012681873445449243 -0.0030000000000000027</Position>
+<Axis>-1.1102230246251565e-16 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincidente2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-2</Uid>
+</InstancePath>
+<Position>0 0.025999999999999912 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-2</Uid>
+</InstancePath>
+<Position>0 -0.0012681873445448133 -0.0030000000000000304</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concéntrica2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-2</Uid>
+</InstancePath>
+<Position>0 0.035499999999999976 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente3">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-3</Uid>
+</InstancePath>
+<Position>0 0.025999999999999912 0</Position>
+<Axis>0 0.99999999999999978 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-3</Uid>
+</InstancePath>
+<Position>0 -0.0012681873445449243 -0.0030000000000000027</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concéntrica3">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-3</Uid>
+</InstancePath>
+<Position>0 0.035499999999999865 0</Position>
+<Axis>0 -0.99999999999999978 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-3</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente4">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-4</Uid>
+</InstancePath>
+<Position>0 0.026000000000000023 0</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-5</Uid>
+</InstancePath>
+<Position>0 -0.0012681873445448133 -0.0030000000000000304</Position>
+<Axis>-1.1102230246251565e-16 -1 1.1102230246251565e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concéntrica4">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-4</Uid>
+</InstancePath>
+<Position>0 0.035499999999999976 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-5</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1.1102230246251565e-16 -1 1.1102230246251565e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente5">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-5</Uid>
+</InstancePath>
+<Position>0 0.026000000000000134 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-6</Uid>
+</InstancePath>
+<Position>0 -0.0012681873445449243 -0.0030000000000000027</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concéntrica5">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-5</Uid>
+</InstancePath>
+<Position>0 0.035500000000000087 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-6</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente6">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-6</Uid>
+</InstancePath>
+<Position>0 0.025999999999999912 0</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-4</Uid>
+</InstancePath>
+<Position>0 -0.0012681873445450353 -0.0030000000000000027</Position>
+<Axis>0 -1 -1.1102230246251565e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concéntrica6">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>A2212Motor-6</Uid>
+</InstancePath>
+<Position>1.1102230246251565e-16 0.035499999999999976 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>APC 8X3.8 Slow Flyer-4</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 -1.1102230246251565e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<UnknownConstraint name="Bloquear1">
+<ConstraintGeometry geomType="Unknown">
+<InstancePath>
+<Uid>Hexacopter_Junio2022-1</Uid>
+<Uid>PortaBat2-1</Uid>
+</InstancePath>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="Unknown">
+<InstancePath>
+<Uid>Clamp-1</Uid>
+</InstancePath>
+</ConstraintGeometry>
+</UnknownConstraint>
+<Concentric name="Concéntrica7">
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>Clamp-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="sphere">
+<InstancePath>
+<Uid>Payload-1</Uid>
+</InstancePath>
+<Position>0 0 1</Position>
+</ConstraintGeometry>
+</Concentric>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="Hexacopter_Junio2022" uid="Hexacopter_Junio2022" version="453">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Hexacopter_Junio2022.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Raspberry Pi 4 Model B.STEP" uid="Raspberry Pi 4 Model B.STEP" version="156">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Raspberry Pi 4 Model B.STEP.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="2.54 mm DUPONT MALE PIN HEADER, IO, 2X20, RPi4ModelB.STEP" uid="2.54 mm DUPONT MALE PIN HEADER, IO, 2X20, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="2.54 mm DUPONT MALE PIN HEADER, IO, 2X20, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00067829577868220485</Mass>
+<CenterOfMass>0 0.0017499183259165746 0</CenterOfMass>
+<Inertia>3.6118654685857496e-09 1.4680105196846348e-07 1.4769740104380722e-07 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="2.54 mm DUPONT MALE PIN HEADER- IO- 2X20- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.51764705882352935" b="0" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.51764705882352935" b="0" a="1"/>
+<Specular r="0.3235294117647059" g="0.25882352941176467" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="2.54 mm DUPONT MALE PIN HEADER, POE, 2X2, RPi4ModelB.STEP" uid="2.54 mm DUPONT MALE PIN HEADER, POE, 2X2, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="2.54 mm DUPONT MALE PIN HEADER, POE, 2X2, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>6.7109577868220666e-05</Mass>
+<CenterOfMass>0 0.0017552818106246256 0</CenterOfMass>
+<Inertia>3.6061047512002174e-10 2.6837904188419746e-10 3.5747627768002175e-10 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="2.54 mm DUPONT MALE PIN HEADER- POE- 2X2- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.51764705882352935" b="0" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.51764705882352935" b="0" a="1"/>
+<Specular r="0.3235294117647059" g="0.25882352941176467" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="2X USB2.0 PORTS, RPi4ModelB.STEP" uid="2X USB2.0 PORTS, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="2X USB2.0 PORTS, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0026462474093627811</Mass>
+<CenterOfMass>-0.0013423288019387962 0.0080406372256881953 -3.8117666216185288e-05</CenterOfMass>
+<Inertia>9.0235105676089533e-08 9.7597254801374356e-08 1.0808210586337078e-07 5.9902896411412985e-11 2.5306834972558844e-10 -7.8416924583626589e-10</Inertia>
+</MassProperties>
+<GeometryFile name="2X USB2.0 PORTS- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="2X USB3.0 PORTS, RPi4ModelB.STEP" uid="2X USB3.0 PORTS, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="2X USB3.0 PORTS, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0024523389712506221</Mass>
+<CenterOfMass>-0.0013402545482630855 0.0081434182388983676 6.875584411382829e-07</CenterOfMass>
+<Inertia>7.8052131022400807e-08 9.0649471555913356e-08 9.9074157192308221e-08 1.0152768020778835e-11 1.3807487451381316e-11 -3.488236480504059e-09</Inertia>
+</MassProperties>
+<GeometryFile name="2X USB3.0 PORTS- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="91D77 D9WHV 778K, 4 GB LPDDR4 SDRAM, RPi4ModelB.STEP" uid="91D77 D9WHV 778K, 4 GB LPDDR4 SDRAM, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="91D77 D9WHV 778K, 4 GB LPDDR4 SDRAM, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00011595035496889903</Mass>
+<CenterOfMass>-4.0208665958027668e-07 0.00039983074374826686 1.00298220581079e-06</CenterOfMass>
+<Inertia>2.0380662972625655e-09 2.9984470057807443e-09 9.7273852301131847e-10 -4.5989805053906752e-14 -1.6872306007031337e-13 1.8434316716439214e-14</Inertia>
+</MassProperties>
+<GeometryFile name="91D77 D9WHV 778K- 4 GB LPDDR4 SDRAM- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="A2212Motor" uid="A2212Motor*:*Default" version="156">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="A2212Motor.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.10071465703455632</Mass>
+<CenterOfMass>0 0.012241211550147088 0</CenterOfMass>
+<Inertia>8.734116934160161e-06 8.9756437843343913e-06 8.7239374376517484e-06 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="A2212Motor_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="APC 8X3.8 Slow Flyer" uid="APC 8X3.8 Slow Flyer*:*Valor predeterminado" version="753">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="APC 8X3.8 Slow Flyer.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0074988125475023088</Mass>
+<CenterOfMass>-3.4303671708396165e-07 0.0026368732197692814 -6.7489356188528181e-07</CenterOfMass>
+<Inertia>1.7393484217322303e-05 1.7664545119732017e-05 3.3271958338102565e-07 2.9888439319633216e-11 -1.5527253730015765e-06 1.5421340931488923e-11</Inertia>
+</MassProperties>
+<GeometryFile name="APC 8X3.8 Slow Flyer_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.75294117647058822" g="0.75294117647058822" b="0.75294117647058822" a="1"/>
+<Diffuse r="0.75294117647058822" g="0.75294117647058822" b="0.75294117647058822" a="1"/>
+<Specular r="0.37647058823529411" g="0.37647058823529411" b="0.37647058823529411" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.20000000298023224</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Arm" uid="Arm*:*Predeterminado" version="114">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Arm.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.031192567872818811</Mass>
+<CenterOfMass>-0.069585490592481328 0.0020654904994989423 1.7571789134950234e-08</CenterOfMass>
+<Inertia>4.9054311529053791e-06 0.00011640621121042141 0.00011535672009007096 -4.1376030476066702e-10 3.9482448755881849e-09 1.3479356871736609e-05</Inertia>
+</MassProperties>
+<GeometryFile name="Arm_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0.29999999999999999" g="0.29999999999999999" b="0.29999999999999999" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Base1" uid="Base1*:*Predeterminado" version="353">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Base1.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.021149954800060947</Mass>
+<CenterOfMass>0.03134340324059403 0.049428190276541252 0.0023472561682912731</CenterOfMass>
+<Inertia>2.2611246964107084e-05 2.2880465315773723e-05 4.5076529248052535e-05 8.1626048038347101e-10 -1.1309810138573047e-08 -3.1749221875595595e-10</Inertia>
+</MassProperties>
+<GeometryFile name="Base1_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Base2" uid="Base2*:*Predeterminado" version="190">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Base2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.011148924918543867</Mass>
+<CenterOfMass>0.031725779434570202 0.049004933509945406 0.003932175158240965</CenterOfMass>
+<Inertia>6.3926294836738908e-06 5.9750900980972132e-06 1.1976756191069335e-05 -3.8853372560963444e-10 -4.7512841898772344e-10 1.9228113886053603e-10</Inertia>
+</MassProperties>
+<GeometryFile name="Base2_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Broadcom BCM2711B0 CPU, RPi4ModelB.STEP" uid="Broadcom BCM2711B0 CPU, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Broadcom BCM2711B0 CPU, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00043552320096911803</Mass>
+<CenterOfMass>8.7162572583155745e-06 0.0010317013031279512 -8.7162572583153491e-06</CenterOfMass>
+<Inertia>7.2967684223587719e-09 1.424281075260443e-08 7.2967684223587727e-09 -1.2465588120584392e-13 -2.5855766363748991e-11 1.2465588120589542e-13</Inertia>
+</MassProperties>
+<GeometryFile name="Broadcom BCM2711B0 CPU- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.3235294117647059" g="0.30980392156862746" b="0.29411764705882354" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Broadcom BCM54213PE Gigabit Ethernet Transceiver, RPi4ModelB.STEP" uid="Broadcom BCM54213PE Gigabit Ethernet Transceiver, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Broadcom BCM54213PE Gigabit Ethernet Transceiver, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>3.6127276934164987e-05</Mass>
+<CenterOfMass>2.0006814303311653e-07 0.0004979772125328195 -8.3330544947479865e-08</CenterOfMass>
+<Inertia>1.1185896087878492e-10 2.1768052556024956e-10 1.1187163380396976e-10 1.499050205071973e-15 0 -3.5926794215714203e-15</Inertia>
+</MassProperties>
+<GeometryFile name="Broadcom BCM54213PE Gigabit Ethernet Transceiver- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Camera Connector, RPi4ModelB.STEP" uid="Camera Connector, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Camera Connector, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00028546261200864266</Mass>
+<CenterOfMass>0 0.0027702361962696691 0.00015477922141241929</CenterOfMass>
+<Inertia>1.1069922882253555e-09 1.0269078710385876e-08 1.0792671366314763e-08 -8.3219537988459282e-11 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Camera Connector- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.51372549019607838" b="0" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.51372549019607838" b="0" a="1"/>
+<Specular r="0.3235294117647059" g="0.25686274509803919" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="CaseB" uid="CaseB*:*Predeterminado" version="1447">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="CaseB.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.01438097634090176</Mass>
+<CenterOfMass>0.031588295041199171 0.046693611974666968 0.0026990045639114228</CenterOfMass>
+<Inertia>1.2110313578502521e-05 6.5232659261817141e-06 1.8346655779404551e-05 -3.0279645517475067e-07 -4.5500191043733352e-08 -8.6486848071957543e-08</Inertia>
+</MassProperties>
+<GeometryFile name="CaseB_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="CaseT" uid="CaseT*:*Predeterminado" version="3901">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="CaseT.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.013147249017955998</Mass>
+<CenterOfMass>0.032126071708908965 0.040848973537290209 0.020730100520604228</CenterOfMass>
+<Inertia>1.0735125736789786e-05 7.0177574038582347e-06 1.7134788611711573e-05 -5.0605584320030266e-08 -1.8521945736280426e-08 -1.0223778181850664e-07</Inertia>
+</MassProperties>
+<GeometryFile name="CaseT_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Clamp" uid="Clamp*:*Predeterminado" version="122">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Clamp.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0016972167393319367</Mass>
+<CenterOfMass>0 0 0.0035575498888925279</CenterOfMass>
+<Inertia>5.6326790558396556e-08 5.6326790558396556e-08 1.0428295949990478e-07 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Clamp_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0.29999999999999999" g="0.29999999999999999" b="0.29999999999999999" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Cypress CYW43455 Wireless Module Cover, RPi4ModelB.STEP" uid="Cypress CYW43455 Wireless Module Cover, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Cypress CYW43455 Wireless Module Cover, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>3.8721132500073898e-05</Mass>
+<CenterOfMass>0 0.0012860541269034704 0</CenterOfMass>
+<Inertia>6.9428545039707563e-10 1.1611607415490321e-09 4.7950236623401558e-10 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Cypress CYW43455 Wireless Module Cover- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.89803921568627454" b="0.89803921568627454" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.89803921568627454" b="0.89803921568627454" a="1"/>
+<Specular r="0.44901960784313727" g="0.44901960784313727" b="0.44901960784313727" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Display Connector, RPi4ModelB.STEP" uid="Display Connector, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Display Connector, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00028546261200864266</Mass>
+<CenterOfMass>0 0.0027702361962696682 0.00015477922141241937</CenterOfMass>
+<Inertia>1.1069922882253559e-09 1.0269078710385876e-08 1.0792671366314763e-08 -8.3219537988459295e-11 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Display Connector- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.51372549019607838" b="0" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.51372549019607838" b="0" a="1"/>
+<Specular r="0.3235294117647059" g="0.25686274509803919" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="ESC" uid="ESC*:*Predeterminado" version="125">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="ESC.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.029769119857196182</Mass>
+<CenterOfMass>0.00029450828502512104 5.8795045055250102e-07 0.0055000000000000005</CenterOfMass>
+<Inertia>1.8515361361677197e-06 4.230308806283003e-06 5.5232264142317798e-06 0 0 -3.8865755721463154e-10</Inertia>
+</MassProperties>
+<GeometryFile name="ESC_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Specular r="0.44901960784313727" g="0.45882352941176469" b="0.46470588235294119" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Female Micro HDMI Connector, RPi4ModelB.STEP" uid="Female Micro HDMI Connector, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Female Micro HDMI Connector, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>6.2806261468190735e-05</Mass>
+<CenterOfMass>-4.6810304951835405e-07 0.0015802761775358192 -0.0018059892380373947</CenterOfMass>
+<Inertia>2.5812476473960345e-10 4.6122237435457937e-10 3.0203652270348058e-10 1.0558996530381458e-11 4.8282415366667097e-14 -4.3700288398043901e-14</Inertia>
+</MassProperties>
+<GeometryFile name="Female Micro HDMI Connector- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Female USB Type C Connector, RPi4ModelB.STEP" uid="Female USB Type C Connector, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Female USB Type C Connector, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00012968157699008639</Mass>
+<CenterOfMass>-8.2227689476402473e-11 0.0015934085303139103 -0.0018324018609526336</CenterOfMass>
+<Inertia>6.8337744172998016e-10 1.3827913910260887e-09 9.1606664633767561e-10 -4.8103566570634203e-12 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Female USB Type C Connector- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Gigabit Ethernet Port, RPi4ModelB.STEP" uid="Gigabit Ethernet Port, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Gigabit Ethernet Port, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0034910147747205457</Mass>
+<CenterOfMass>8.1372929265454799e-07 0.00019908549313463075 -0.012316606435802523</CenterOfMass>
+<Inertia>1.7877709841454626e-07 2.017198107927356e-07 1.4426889570744972e-07 -1.9872174150243533e-09 -3.8212486013695937e-11 1.9660101646481655e-12</Inertia>
+</MassProperties>
+<GeometryFile name="Gigabit Ethernet Port- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Landing_leg" uid="Landing_leg*:*Predeterminado" version="389">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Landing_leg.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.010147978244858573</Mass>
+<CenterOfMass>0.045035743894360547 0.091625592407884857 0.0049996422292296529</CenterOfMass>
+<Inertia>2.0508891845819411e-05 1.0150422432423019e-05 3.035480859136117e-05 1.1463717855530364e-10 -2.1712332216928233e-12 -1.294824048874166e-05</Inertia>
+</MassProperties>
+<GeometryFile name="Landing_leg_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Leveled_Base_1_3_5_Mod" uid="Leveled_Base_1_3_5_Mod*:*Predeterminado" version="718">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Leveled_Base_1_3_5_Mod.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0073316457819439266</Mass>
+<CenterOfMass>-0.0032816058363886028 0.00088578546682792402 0.007147814324489501</CenterOfMass>
+<Inertia>7.2602105253085857e-07 6.5092770170736271e-07 1.1798001451987613e-06 3.5627383638151325e-08 1.0506095043379259e-07 -1.2994789446635008e-08</Inertia>
+</MassProperties>
+<GeometryFile name="Leveled_Base_1_3_5_Mod_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0.29999999999999999" g="0.29999999999999999" b="0.29999999999999999" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Leveled_Base_2_4_6_Mod" uid="Leveled_Base_2_4_6_Mod*:*Predeterminado" version="588">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Leveled_Base_2_4_6_Mod.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0071536194991813169</Mass>
+<CenterOfMass>-0.0032466972203246346 -0.00076405350611758892 0.0071310460030580879</CenterOfMass>
+<Inertia>7.100807854531701e-07 6.3927294944504952e-07 1.1565709748002081e-06 -4.0991672155282674e-08 1.0412752977753473e-07 3.3206850583800723e-08</Inertia>
+</MassProperties>
+<GeometryFile name="Leveled_Base_2_4_6_Mod_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Microphone Plug, RPi4ModelB.STEP" uid="Microphone Plug, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Microphone Plug, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0003312415591161591</Mass>
+<CenterOfMass>5.0891982084951396e-06 0.0028250896139839668 0.0011612915709182953</CenterOfMass>
+<Inertia>7.6478531975374051e-09 8.170990397831165e-09 2.8308775213714826e-09 4.1566792172296527e-11 1.8601284310460501e-11 2.3207189473542641e-12</Inertia>
+</MassProperties>
+<GeometryFile name="Microphone Plug- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.75294117647058822" g="0.75294117647058822" b="0.75294117647058822" a="1"/>
+<Diffuse r="0.75294117647058822" g="0.75294117647058822" b="0.75294117647058822" a="1"/>
+<Specular r="0.37647058823529411" g="0.37647058823529411" b="0.37647058823529411" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="MxL7704 Universal PMIC, RPi4ModelB.STEP" uid="MxL7704 Universal PMIC, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="MxL7704 Universal PMIC, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>2.005684620990748e-05</Mass>
+<CenterOfMass>-1.886377059959675e-07 0.00039874231025822975 -8.969389305036817e-08</CenterOfMass>
+<Inertia>4.2989392591602252e-11 8.3837910588446142e-11 4.2995342664285873e-11 7.128665791135012e-16 2.1959645140720304e-15 1.4990932133707357e-15</Inertia>
+</MassProperties>
+<GeometryFile name="MxL7704 Universal PMIC- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="NAVIO2" uid="NAVIO2*:*Predeterminado" version="983">
+<ModelUnits mass="kilogram" length="centimeter"/>
+<PartFile name="NAVIO2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0062307563825945485</Mass>
+<CenterOfMass>0.00021889191839652477 0.00015744507594512967 0.0025577546182207283</CenterOfMass>
+<Inertia>1.7755493011422149e-06 3.8604910524314598e-06 2.1063645306245158e-06 -1.9917587899616274e-08 1.0334957115718576e-07 -1.0675455832524144e-08</Inertia>
+</MassProperties>
+<GeometryFile name="NAVIO2_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.5" g="0.5" b="0.5" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="PCB, RPi4ModelB.STEP" uid="PCB, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="PCB, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.007506129553111046</Mass>
+<CenterOfMass>0.00012078223333921424 0 0.00017259459791494521</CenterOfMass>
+<Inertia>1.9271841070308943e-06 6.4319492034842192e-06 4.5079662011413643e-06 0 9.8556904149806673e-09 0</Inertia>
+</MassProperties>
+<GeometryFile name="PCB- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Payload" uid="Payload*:*Predeterminado" version="132">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Payload.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.53536187818305236</Mass>
+<CenterOfMass>0 0 0.0017364645923464387</CenterOfMass>
+<Inertia>0.0013295590015723437 0.0013295590015723437 0.00053407618645027631 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Payload_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0.29999999999999999" g="0.29999999999999999" b="0.29999999999999999" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="PortaBat2" uid="PortaBat2*:*Predeterminado" version="170">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="PortaBat2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.14939660179440048</Mass>
+<CenterOfMass>-0.0043013026553599069 0 0.027575475435015366</CenterOfMass>
+<Inertia>0.0001093447866702955 0.00034616582786576791 0.00033756882284656156 0 -7.6832998694453081e-08 0</Inertia>
+</MassProperties>
+<GeometryFile name="PortaBat2_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0.29999999999999999" g="0.29999999999999999" b="0.29999999999999999" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Rubber" uid="Rubber*:*Predeterminado" version="193">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Rubber.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0054806100672118449</Mass>
+<CenterOfMass>2.2802034289838099e-11 4.2134356076953204e-12 -0.0084999996207656969</CenterOfMass>
+<Inertia>2.5590914288362533e-07 2.5590914124414859e-07 3.1241266262666811e-07 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Rubber_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="S550_UP_Plate" uid="S550_UP_Plate*:*Predeterminado" version="110">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="S550_UP_Plate.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>2.9937494159598378e-05</Mass>
+<CenterOfMass>4.0643895993531719e-07 0.00077500000000000019 9.737918026039592e-08</CenterOfMass>
+<Inertia>6.0395274341227336e-08 1.1866672558756081e-07 5.828343871795322e-08 0 1.8603160099308218e-13 0</Inertia>
+</MassProperties>
+<GeometryFile name="S550_UP_Plate_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0.37450980392156863" g="0.37450980392156863" b="0.37450980392156863" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="SD Card Slot, RPi4ModelB.STEP" uid="SD Card Slot, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="SD Card Slot, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>8.5448783872262577e-05</Mass>
+<CenterOfMass>0.0005061023589993999 0.0007076077491508727 -0.0012786661211392273</CenterOfMass>
+<Inertia>9.3634893263985921e-10 2.1656415550000372e-09 1.2639991587754519e-09 2.2786295230017186e-11 -8.8614283183914564e-11 -3.3969926557705206e-12</Inertia>
+</MassProperties>
+<GeometryFile name="SD Card Slot- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.51764705882352935" b="0" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.51764705882352935" b="0" a="1"/>
+<Specular r="0.3235294117647059" g="0.25882352941176467" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Top_Plate_S550" uid="Top_Plate_S550*:*Predeterminado" version="113">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Top_Plate_S550.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>2.7564175197509067e-05</Mass>
+<CenterOfMass>0 0.00077499999999999997 0.00047700960648411415</CenterOfMass>
+<Inertia>6.1941540729699824e-08 1.2165131177571796e-07 5.9720808201170141e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Top_Plate_S550_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Emissive r="0.22470588235294117" g="0.22470588235294117" b="0.22470588235294117" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Turnigy 3300mAh 4S" uid="Turnigy 3300mAh 4S*:*Default" version="111">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="Turnigy 3300mAh 4S.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.47978409075358558</Mass>
+<CenterOfMass>-1.7420186618671927e-09 0 0</CenterOfMass>
+<Inertia>0.00011311183143122116 0.00079021158674052138 0.0008317884094530192 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Turnigy 3300mAh 4S_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.89999997615814209" g="0.89999997615814209" b="0.89999997615814209" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.30000001192092896</Shininess>
+</VisualProperties>
+</Part>
+<Part name="VIA VL805 PCIe USB 3.0 controller, RPi4ModelB.STEP" uid="VIA VL805 PCIe USB 3.0 controller, RPi4ModelB.STEP*:*Predeterminado" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="VIA VL805 PCIe USB 3.0 controller, RPi4ModelB.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>5.1719862174305166e-05</Mass>
+<CenterOfMass>-8.9512627583210056e-08 0.00039613428722341505 -4.6493914834338262e-07</CenterOfMass>
+<Inertia>2.8166898817063927e-10 5.5776474729655363e-10 2.8168220112999156e-10 9.5912307044879552e-15 5.6962410944454342e-15 1.8466758845561366e-15</Inertia>
+</MassProperties>
+<GeometryFile name="VIA VL805 PCIe USB 3.0 controller- RPi4ModelB.STEP_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
