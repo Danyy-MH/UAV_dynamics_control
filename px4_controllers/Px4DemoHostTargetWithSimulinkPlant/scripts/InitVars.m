@@ -32,7 +32,7 @@ windVel = [0 0 0]';
 % Initial states
 init.posNED = [0, 0, 0]; % m
 init.vb = [0 0 0]'; %m/s
-init.euler = [0, 0, 0]'; %Roll Pitch Yaw Rads
+init.euler = [0, 0, 0.2]'; %Roll Pitch Yaw Rads
 init.angRates = [0, 0, 0]; %rad/s 
 
 
