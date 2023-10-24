@@ -3,3 +3,6 @@
 slprj/
 
 **/*.autosave
+
+**/* .asv
+
