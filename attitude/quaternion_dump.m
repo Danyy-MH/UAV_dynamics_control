@@ -1,4 +1,4 @@
-% clc
+clc
 % clear
 % close all
 
@@ -38,5 +38,25 @@ Quaternion math dump
 % q2 = eul2quat(att2)'
 % q2c = quatconj(q2')'
 % att2_q2c = quat2eul(q2c')
+% 
+qt2 = timeseries2timetable(out.qt);
+q1 = qt2.(1);
+euler = zeros(length(q1), 3);
+euler2 = zeros(length(q1), 3);
+% 
+for i= 1:length(q1)
+    quat = q1(i,:);
+    quatc = quatconj(quat);
+    euler(i, :) = rad2deg(quat2eul(quat));
+    euler2(i, :) = rad2deg(quat2eul(quatc));
+end
 
-qt2 = out.qt
+time = 0.1:1:length(q1);
+plot(time, euler(:, 3)')
+hold on
+plot(time, euler2(:, 3)');
+grid on
+legend('Quat', 'Quat C')
+
+
+
