@@ -131,16 +131,19 @@ format long
 
 %% VantTec motor
 
-filename = "Tmotor_8_DJI.csv";
+filename = "TMotor_1045.csv";
+% filename = "EMAX_1045.csv";
 file = readmatrix(filename);
 
-pwm = file(1:23, 2);
+num_data = 22;
 
-torque2 = file(1:23,9:9);
-thrust2 = file(1:23,10:10);
+pwm = file(1:num_data , 2);
+
+torque2 = file(1:num_data ,9:9);
+thrust2 = file(1:num_data ,10:10);
 thrust2 = thrust2.*-1;
 
-angular_vel2 = file(1:23,14:14);
+angular_vel2 = file(1:num_data ,14:14);
 angular_vel_22 = angular_vel2.^2;
 angular_vel2_lg = [ones(length(angular_vel_22), 1) angular_vel_22];
 
@@ -149,19 +152,25 @@ pwm_lg = [ones(length(pwm), 1), pwm];
 %linear reg
 
 b5 = angular_vel2_lg\torque2;
-disp("Torque")
-disp(b5);
+disp("Torque constant")
+disp(b5(2));
 btorque2 = angular_vel2_lg*b5;
 
-b5 = angular_vel2_lg\thrust2;
-disp("Thrust")
-disp(b5);
-bthrust2 = angular_vel2_lg*b5;
+m2 = angular_vel2_lg\thrust2;
+disp("Thrust constant")
+disp(m2(2));
+bthrust2 = angular_vel2_lg*m2;
 
 pwm_slope = pwm_lg\thrust2;
 fprintf('Values for pwm linear regression: \n')
 disp(pwm_slope)
 pwm_linear_regression = pwm_lg * pwm_slope;
+
+degree = 2; % Choose the degree of the polynomial (e.g., 2 for quadratic)
+coefficients = polyfit(angular_vel_22, pwm, degree); % Fit a polynomial to the data
+pwm_fit = polyval(coefficients, angular_vel_22);
+fprintf("Polyfit of angular velocity square vs pwm")
+disp(coefficients)
 
 %ploting
 
@@ -206,11 +215,11 @@ legend('Data', 'Linear reg', 'Location','best')
 
 subplot(2,2,4)
 
-caption3 = 'PWM vs Omega^2';
-plot(pwm, angular_vel_22)
-% hold on
-% plot(pwm, pwm_linear_regression)
+caption3 = 'Omega^2 vs PWM';
+plot(angular_vel_22, pwm)
+hold on
+plot(angular_vel_22, pwm_fit)
 title(caption3, 'FontSize', fontSize)
-xlabel('$$PWM$','Interpreter','latex', 'FontSize', fontSize)
-ylabel('$\omega^2$', 'Interpreter','latex', 'FontSize', fontSize)
-legend('Data', 'Location','best')
+ylabel('$$PWM$','Interpreter','latex', 'FontSize', fontSize)
+xlabel('$\omega^2$', 'Interpreter','latex', 'FontSize', fontSize)
+legend('Data', 'Polyfit', 'Location','best')
