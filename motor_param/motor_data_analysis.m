@@ -131,8 +131,13 @@ format long
 
 %% VantTec motor
 
-filename = "TMotor_1045.csv";
+% filename = "TMotor_1045.csv";
 % filename = "EMAX_1045.csv";
+filename = "multistart.csv";
+% filename = "AX_750.csv";
+fprintf('Please Select the file to be analyzed: \n')
+fprintf('[1] AX_750.csv \n[2] EMAX_8_DJI.csv \n[3] EMAX_1045.csv\n')
+fprintf('[4] multistart.csv \n[5] TMotor_8_DJI.csv \n[6] TMotor_1045.csv\n\n')
 file = readmatrix(filename);
 
 num_data = 22;
@@ -162,8 +167,8 @@ disp(m2(2));
 bthrust2 = angular_vel2_lg*m2;
 
 pwm_slope = pwm_lg\thrust2;
-fprintf('Values for pwm linear regression: \n')
-disp(pwm_slope)
+% fprintf('Values for pwm linear regression: \n')
+% disp(pwm_slope)
 pwm_linear_regression = pwm_lg * pwm_slope;
 
 degree = 2; % Choose the degree of the polynomial (e.g., 2 for quadratic)
