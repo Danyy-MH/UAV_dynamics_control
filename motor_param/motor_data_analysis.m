@@ -11,138 +11,27 @@ clear
 close all
 format long
 
-%% EMAX with 8 inch propeller
+%% Motor Analysis
 
-
-% clc
-% clear
-% filename = "EMAX_8_DJI.csv";
-% file = readmatrix(filename);
-% 
-% pwm = file(1:23, 2);
-% torque = file(1:23,9);
-% thrust = file(1:23,10);
-% 
-% thrust = thrust .* -1;
-% angular_vel = file(1:23,14);
-% angular_vel_2 = angular_vel.^2;
-% 
-% figure('Name','EMAX_8_DJI')
-% subplot(3,1,1)
-% plot(angular_vel_2, torque);
-% 
-% title('Torque Factor kQ')
-% xlabel('$\omega^2(rad^2/s^2)$','Interpreter','latex')
-% ylabel('Torque [N m]')
-% 
-% subplot(3,1,2)
-% plot(angular_vel_2, thrust);
-% 
-% title('Thrust Factor kT')
-% xlabel('$\omega^2(rad^2/s^2)$','Interpreter','latex')
-% ylabel('Thrust [N]')
-% 
-% subplot(3,1,3)
-% plot(pwm, thrust);
-% 
-% title('Thrust Factor kT')
-% xlabel('PWM','Interpreter','latex')
-% ylabel('Thrust [N]')
-
-%% EMAX with 10 inch propeller
-
-% filename = "C:\Users\Adan Daniel\Documents\IMT\7Semestre_tec\Estancia_investigacion\motor_data\EMAX_1045.csv";
-% file = readmatrix(filename);
-% 
-% torque2 = file(1:23,9:9);
-% thrust2 = file(1:23,10:10);
-% thrust2 = thrust2.*-1;
-% angular_vel2 = file(1:23,14:14);
-% angular_vel_22 = angular_vel2.^2;
-% 
-% figure('Name','EMAX_1045')
-% subplot(2,1,1)
-% plot(angular_vel_22, torque2);
-% 
-% title('Torque Factor kQ')
-% xlabel('$\omega^2(rad^2/s^2)$','Interpreter','latex')
-% ylabel('Torque [N m]')
-% 
-% subplot(2,1,2)
-% plot(angular_vel_22, thrust2);
-% 
-% title('Thrust Factor kT')
-% xlabel('$\omega^2(rad^2/s^2)$','Interpreter','latex')
-% ylabel('Thrust [N]')
-
-%% TMotor with 10 inch propeller
-
-% filename = "C:\Users\Adan Daniel\Documents\IMT\7Semestre_tec\Estancia_investigacion\motor_data\TMotor_1045.csv";
-% file = readmatrix(filename);
-% 
-% torque2 = file(1:23,9:9);
-% thrust2 = file(1:23,10:10);
-% thrust2 = thrust2.*-1;
-% angular_vel2 = file(1:23,14:14);
-% angular_vel_22 = angular_vel2.^2;
-% 
-% figure('Name','TMotor_1045')
-% subplot(2,1,1)
-% plot(angular_vel_22, torque2);
-% 
-% title('Torque Factor kQ')
-% xlabel('$\omega^2(rad^2/s^2)$','Interpreter','latex')
-% ylabel('Torque [N m]')
-% 
-% subplot(2,1,2)
-% plot(angular_vel_22, thrust2);
-% 
-% title('Thrust Factor kT')
-% xlabel('$\omega^2(rad^2/s^2)$','Interpreter','latex')
-% ylabel('Thrust [N]')
-
-
-%% TMotor with 8 inch propeller
-
-% filename = "C:\Users\Adan Daniel\Documents\IMT\7Semestre_tec\Estancia_investigacion\motor_data\TMotor_8_DJI.csv";
-% file = readmatrix(filename);
-% 
-% torque2 = file(1:23,9:9);
-% thrust2 = file(1:23,10:10);
-% thrust2 = thrust2.*-1;
-% angular_vel2 = file(1:23,14:14);
-% angular_vel_22 = angular_vel2.^2;
-% 
-% figure('Name','TMotor_8_DJI')
-% subplot(2,1,1)
-% plot(angular_vel_22, torque2);
-% 
-% title('Torque Factor kQ')
-% xlabel('$\omega^2(rad^2/s^2)$','Interpreter','latex')
-% ylabel('Torque [N m]')
-% 
-% subplot(2,1,2)
-% plot(angular_vel_22, thrust2);
-% 
-% title('Thrust Factor kT')
-% xlabel('$\omega^2(rad^2/s^2)$','Interpreter','latex')
-% ylabel('Thrust [N]')
-
-
-%% VantTec motor
-
-% filename = "TMotor_1045.csv";
+filename = "TMotor_1045.csv";
 % filename = "EMAX_1045.csv";
-filename = "VANTEC.csv";
+% filename = "VANTEC.csv";
 % filename = "AX_750.csv";
-fprintf('Please Select the file to be analyzed: \n')
-fprintf('[1] AX_750.csv \n[2] EMAX_8_DJI.csv \n[3] EMAX_1045.csv\n')
-fprintf('[4] multistart.csv \n[5] TMotor_8_DJI.csv \n[6] TMotor_1045.csv\n\n')
+% fprintf('Please Select the file to be analyzed: \n')
+% fprintf('[1] AX_750.csv \n[2] EMAX_8_DJI.csv \n[3] EMAX_1045.csv\n')
+% fprintf('[4] multistart.csv \n[5] TMotor_8_DJI.csv \n[6] TMotor_1045.csv\n\n')
 file = readmatrix(filename);
 
 num_data = 22;
 
 pwm = file(1:num_data , 2);
+
+pwm_short = pwm(pwm >= 1100 & pwm <= 1900);
+length(pwm_short)
+startIndex = find(pwm == pwm_short(1));
+endIndex = find(pwm == pwm_short(end));
+
+
 
 torque2 = file(1:num_data ,9:9);
 thrust2 = file(1:num_data ,10:10);
@@ -171,9 +60,12 @@ pwm_slope = pwm_lg\thrust2;
 % disp(pwm_slope)
 pwm_linear_regression = pwm_lg * pwm_slope;
 
+%poly fit for omega square vs pwm
+
 degree = 2; % Choose the degree of the polynomial (e.g., 2 for quadratic)
-coefficients = polyfit(angular_vel_22, pwm, degree); % Fit a polynomial to the data
-pwm_fit = polyval(coefficients, angular_vel_22);
+omega_square_short = angular_vel_22(startIndex:endIndex);
+coefficients = polyfit(omega_square_short, pwm_short, degree); % Fit a polynomial to the data
+pwm_fit = polyval(coefficients, omega_square_short);
 fprintf("Polyfit of angular velocity square vs pwm")
 disp(coefficients)
 
@@ -182,7 +74,7 @@ disp(coefficients)
 fontSize = 14;
 caption = sprintf('Torque Factor kQ');
 
-figure('Name','Tmotor_8')
+figure('Name','Motor Analysis')
 subplot(2,2,1)
 
 plot(angular_vel_22, torque2);
@@ -223,7 +115,7 @@ subplot(2,2,4)
 caption3 = 'Omega^2 vs PWM';
 plot(angular_vel_22, pwm)
 hold on
-plot(angular_vel_22, pwm_fit)
+plot(omega_square_short, pwm_fit)
 title(caption3, 'FontSize', fontSize)
 ylabel('$$PWM$','Interpreter','latex', 'FontSize', fontSize)
 xlabel('$\omega^2$', 'Interpreter','latex', 'FontSize', fontSize)
