@@ -1,0 +1,15 @@
+<?xml-stylesheet href="defaultstyles.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:d="http://www.mathworks.com/blockgraphics" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg_3" width="202" height="100" d:options="PreserveAspect:On;ScalingOnResizeMax:2.0;Rotate:Off;Resize:FitToBlock">
+	<g id="layer_4" title="layer_0">
+		<g id="group_7">
+			<math id="equation_5" class="equation" height="33" width="193" x="4.5" y="46.2" style="font-size:10px; scalingFactors:1">
+				$$\eta = \frac{1}{\lambda_2 \xi_2} | \dot e_*| ^{2 - \lambda_2} \text{sign}(\dot e_*) \big ( 1 + \lambda_1 \xi_1 |e_*| ^{\lambda_1 -1 } \big)
+				$$			</math>
+			<math id="equation_6" class="equation" height="22" width="160.97" x="20.52" y="24.2" style="font-size:10px; scalingFactors:1">
+				$$u = g(x)^{-1} \Big ( 
+				    -f(x,t) + \eta + \ddot x_d - u_{\text{aux}}
+				    \Big)
+				$$			</math>
+		</g>
+	</g>
+</svg>
