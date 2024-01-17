@@ -16,6 +16,11 @@ format long
 filename = "TMotor_1045.csv";
 % filename = "EMAX_1045.csv";
 % filename = "VANTEC.csv";
+<<<<<<< HEAD
+% filename = "multistar.csv";
+filename = "motor1_dan.csv";
+=======
+>>>>>>> f3409066730de71ccc24ecb1e9edb023c107a5e4
 % filename = "AX_750.csv";
 % fprintf('Please Select the file to be analyzed: \n')
 % fprintf('[1] AX_750.csv \n[2] EMAX_8_DJI.csv \n[3] EMAX_1045.csv\n')
