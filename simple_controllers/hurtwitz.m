@@ -3,7 +3,7 @@ clear
 close all
 
 % Example usage:
-coefficients = [1, 20, 200, 500]; % Adjust coefficients as needed
+coefficients = [1, 16, 60, 100]; % Adjust coefficients as needed
 isPolynomialHurwitz(coefficients);
 
 function isHurwitz = isPolynomialHurwitz(coeffs)
