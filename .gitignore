@@ -1,6 +1,6 @@
 *.log
 
-slprj/
+*slprj/
 
 **/*.autosave
 
