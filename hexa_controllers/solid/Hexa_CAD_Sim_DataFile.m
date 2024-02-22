@@ -9,7 +9,7 @@
 %%%VariableName:smiData
 
 
-%============= RigidTransform =============%
+%============= RigidTransform =============%luego 
 
 %Initialize the RigidTransform structure array by filling in null values.
 smiData.RigidTransform(78).translation = [0.0 0.0 0.0];
