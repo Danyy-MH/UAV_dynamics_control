@@ -15,3 +15,5 @@ ejemplo/
 **/*.slx.original
 
 **/*solid/
+
+**slprj/
