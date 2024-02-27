@@ -9,16 +9,29 @@ Parameter Sweep for tunning variables
 
 %% Simulink Connection
 
-open_system("simple_FXTDiff_ANSFT")
+% open_system("simple_FXTDiff_ANSFT")
+open_system("simple_SOF_ANSFT")
 
-start = 4;
-step = 0.5;
-limit = 6.5;
+% ask user start, step, and limit for the sweeping analysis
 
+prompt = "Parameter Sweep start: ";
+start = input(prompt);
+prompt = "Parameter Sweep step: ";
+step = input(prompt);
+prompt = "Parameter Sweep limit: ";
+%%
+
+limit = input(prompt);
 gain = start:step:limit;
+fprintf("Number of simulations to run: %4f \n", length(gain));
 
+%% ask user parameter to sweep
+% prompt = "Parameter Sweep name: ";
+% ps_name = "/" + input(prompt, "s");
+% ps_name = input(prompt, "s");
+%%
 for k = 1:length(gain)
-    set_param([bdroot, '/G2'], 'Value', num2str(gain(k)));
+    set_param([bdroot, '/alpha_u'], 'Value', num2str(gain(k)));
     simOut(k) = sim(gcs);
     disp(['Completed ', num2str(k), ' of ', num2str(length(gain)), ' simulations']);
 end
@@ -32,7 +45,8 @@ l_list = cell(1, length(gain) + 1);
 logsout = simOut(1).logsout;
 output2 = logsout.getElement('qd');
 y_out2 = output2.Values.Data;
-y_out2 = reshape(y_out2, [1501, 1]);
+% length(y_out2)
+y_out2 = reshape(y_out2, [length(y_out2), 1]);
 x_out2 = output2.Values.Time;
 plot(x_out2, y_out2)
 l_list{1} = strcat('Ref');
@@ -59,7 +73,7 @@ l_list = cell(1, length(gain) + 1);
 logsout = simOut(1).logsout;
 output2 = logsout.getElement('qd_dot');
 y_out2 = output2.Values.Data;
-y_out2 = reshape(y_out2, [1501, 1]);
+y_out2 = reshape(y_out2, [length(y_out2), 1]);
 x_out2 = output2.Values.Time;
 plot(x_out2, y_out2)
 l_list{1} = strcat('Ref');
@@ -201,11 +215,9 @@ title('Adaptive Gain: $K$', 'Interpreter', 'latex')
 %% Legend Callback
 
 function hitcallback(src,evnt)
-
     if strcmp(evnt.Peer.Visible,'on')
         evnt.Peer.Visible = 'off';
     else 
         evnt.Peer.Visible = 'on';
     end
-
 end
