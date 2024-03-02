@@ -1,5 +1,4 @@
 clc
-clear
 close all
 
 %{
@@ -20,6 +19,8 @@ M = [m, 0, 0, 0, 0, 0;
     0, 0, 0, 0, Iy, 0;
     0, 0, 0, 0, 0, Iz];
 
+M * M
+
 Minv = inv(M);
 
 vel = [u; v; w; p; q; r];
@@ -31,4 +32,14 @@ Phi = [0, -r, q, 0, -w, v;
         0, 0, 0, r, 0, -p;
         0, 0, 0, -q, p, 0];
 
-fxt = M \ transpose(Phi) * M * vel
+fxt = M \ transpose(Phi) * M * vel;
+
+%%
+roll = 0;
+pitch = 0;
+yaw = deg2rad(45);
+angle2quat(roll, pitch, yaw, 'XYZ');
+
+dcm= [-1 0 0; 0 0 1; 0 1 0];
+
+dcm2quat(dcm);
