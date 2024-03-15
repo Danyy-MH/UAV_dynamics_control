@@ -10,7 +10,7 @@ Parameter Sweep for tunning variables
 %% Simulink Connection
 
 % open_system("simple_FXTDiff_ANSFT")
-open_system("simple_SOF_ANSFT")
+open_system("simple_relaxed_ANSFT")
 
 % ask user start, step, and limit for the sweeping analysis
 
@@ -31,13 +31,12 @@ fprintf("Number of simulations to run: %4f \n", length(gain));
 % ps_name = input(prompt, "s");
 %%
 for k = 1:length(gain)
-    set_param([bdroot, '/alpha_u'], 'Value', num2str(gain(k)));
+    set_param([bdroot, '/epsilon'], 'Value', num2str(gain(k)));
     simOut(k) = sim(gcs);
     disp(['Completed ', num2str(k), ' of ', num2str(length(gain)), ' simulations']);
 end
 
 %% Plot System Parameter Sweep respones
-clf % refresh plots
 figure('Name', 'Parameter Sweep Analysis I', 'NumberTitle', 'off');
 % , 'WindowState', 'maximized')
 subplot(2, 2, 1)
@@ -53,7 +52,7 @@ l_list{1} = strcat('Ref');
 hold on
 for k = 1:length(gain)
     logsout = simOut(k).logsout;
-    output = logsout.getElement('gamma_hat_1');
+    output = logsout.getElement('gamma_1');
     y_out = output.Values.Data;
     x_out = output.Values.Time;
     l_list{k + 1} = strcat('Gain = ', num2str(gain(k)));
@@ -66,7 +65,7 @@ l.ItemHitFcn = @hitcallback;
 grid on
 xlabel('Time [s]')
 ylabel('Position [m]')
-title('Estimated Positions: $\hat \gamma_1$', 'Interpreter', 'latex')
+title('Positions: $\gamma_1$', 'Interpreter', 'latex')
 
 subplot(2, 2, 2)
 l_list = cell(1, length(gain) + 1);
@@ -80,7 +79,7 @@ l_list{1} = strcat('Ref');
 hold on
 for k = 1:length(gain)
     logsout = simOut(k).logsout;
-    output = logsout.getElement('gamma_hat_2');
+    output = logsout.getElement('gamma_2');
     y_out = output.Values.Data;
     x_out = output.Values.Time;
     l_list{k + 1} = strcat('Gain = ', num2str(gain(k)));
@@ -93,7 +92,7 @@ l.ItemHitFcn = @hitcallback;
 grid on
 xlabel('Time [s]')
 ylabel('Velocity [m/s]')
-title('Estimated Velocities: $\hat \gamma_2$', 'Interpreter', 'latex')
+title('Velocities: $ \gamma_2$', 'Interpreter', 'latex')
 
 subplot(2, 2, 3)
 l_list = cell(1, length(gain));
@@ -118,7 +117,7 @@ subplot(2, 2, 4)
 l_list = cell(1, length(gain));
 for k = 1:length(gain)
     logsout = simOut(k).logsout;
-    output = logsout.getElement('e_hat');
+    output = logsout.getElement('e');
     y_out = output.Values.Data;
     x_out = output.Values.Time;
     l_list{k} = strcat('Gain = ', num2str(gain(k)));
@@ -131,7 +130,7 @@ l.ItemHitFcn = @hitcallback;
 grid on
 xlabel('Time [s]')
 ylabel('error [m]')
-title('Estimated error: $\hat e$', 'Interpreter', 'latex')
+title('error: $\hat e$', 'Interpreter', 'latex')
 
 %% Controller parameters I
 figure('Name', 'Parameter Sweep Analysis II', 'NumberTitle', 'off');
