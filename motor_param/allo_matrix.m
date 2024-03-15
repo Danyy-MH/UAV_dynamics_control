@@ -69,7 +69,7 @@ m56 = sin(alpha(6))*(-l*kT*cos(varphi) + kQ*sin(varphi));
 m66 = -l*kT*sin(varphi) - kQ*cos(varphi);
 
 allo = [m11, m12, m13, m14, m15, m16;
-        m21, m22, -m23, m24, m25, m26;
+        m21, m22, m23, m24, m25, m26;
         m31, m32, m33, m34, m35, m36;
         m41, m42, m43, m44, m45, m46;
         m51, m52, m53, m54, m55, m56;
