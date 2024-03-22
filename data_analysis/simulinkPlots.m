@@ -250,7 +250,7 @@ grid off
 
 axis([0 100 -0.05 0.2])
 xlabel('Time (s)','Interpreter','latex')
-ylabel('Position (m)','Interpreter','latex')
+ylabel('Position (rad)','Interpreter','latex')
 lgd = legend('$\phi_d$', '$\phi$', '$\theta_d$', '$\theta$', '$\psi_d$', '$\psi$' ,'Interpreter','latex', 'Location','best', 'Orientation','horizontal');
 lgd.ItemTokenSize = [50, 28];
 legend boxoff
@@ -315,48 +315,71 @@ set(gcf,'color','w');
 ax = gca;
 ax.FontSize = f_size ;
 
-%% UAV fx, fy and torques
+%% UAV control inputs
 
 forces = out.forces.signals.values(:, 1:3);
 torques = out.forces.signals.values(:, 4:6);
+hei = 0.29;
 
 figure('Name', 'Horizontal Forces and Torques', 'NumberTitle', 'off', 'WindowState', 'maximized', 'Color', 'w');
 
-subplot(2,1,1);
+subplot(3, 1, 1)
+plot(time, forces(:,1), 'LineStyle','-', 'LineWidth', 1, 'Color', 'black')
+% plot(time, forces(:,3), 'LineStyle','--', 'LineWidth', 1, 'Color', 'red')
+ylabel('Force [N]', 'Interpreter', 'latex')
+lgd = legend('$f_z$', 'Interpreter', 'latex', 'Orientation', 'horizontal', 'Location','best');
+lgd.ItemTokenSize = [40, 28];
+fontsize(lgd, 36, "points")
+legend boxoff
+ax = gca;
+ax.FontSize = 36;
+xticklabels({});  % Remove x-axis tick labels
+pos = get(gca, 'Position');
+pos(4) = hei; % Adjust the height of the subplot
+set(gca, 'Position', pos);
+
+subplot(3,1,2);
 hold on
-plot(time, forces(:,2), 'LineStyle','-', 'LineWidth', 1, 'Color', 'blue')
-plot(time, forces(:,3), 'LineStyle','--', 'LineWidth', 1, 'Color', 'red')
+plot(time, forces(:,2), 'LineStyle','-', 'LineWidth', 1, 'Color', 'red')
+plot(time, forces(:,3), 'LineStyle','--', 'LineWidth', 1, 'Color', 'blue')
 hold off
 ylabel('Force [N]', 'Interpreter', 'latex')
 lgd = legend('$f_x$', '$f_y$', 'Interpreter', 'latex', 'Orientation', 'horizontal', 'Location','best');
 lgd.ItemTokenSize = [50, 28];
-fontsize(lgd, f_size, "points")
+fontsize(lgd, 36, "points")
 legend boxoff
+box on
 ax = gca;
-ax.FontSize = f_size;
+ax.FontSize = 36;
 xticklabels({});  % Remove x-axis tick labels
 pos = get(gca, 'Position');
-pos(4) = 0.3; % Adjust the height of the subplot
+pos(4) = hei; % Adjust the height of the subplot
 set(gca, 'Position', pos);
 
-subplot(2,1,2);
+subplot(3,1,3);
 hold on
-plot(time, torques(:,1), 'LineStyle','-', 'LineWidth', 1, 'Color', 'blue')
-plot(time, torques(:,2), 'LineStyle','--', 'LineWidth', 1, 'Color', 'red')
+plot(time, torques(:,1), 'LineStyle','-', 'LineWidth', 1, 'Color', 'red')
+plot(time, torques(:,2), 'LineStyle','--', 'LineWidth', 1, 'Color', 'blue')
 plot(time, torques(:,3), 'LineStyle','-.', 'LineWidth', 1, 'Color', 'black')
 hold off
 xlabel('Time (s)', 'Interpreter', 'latex')
 ylabel('Torque [Nm]', 'Interpreter', 'latex')
 lgd = legend('$\tau_\phi$', '$\tau_\theta$', '$\tau_\psi$', 'Interpreter', 'latex', 'Orientation', 'horizontal', 'Location','best');
 lgd.ItemTokenSize = [50, 28];
-fontsize(lgd, f_size, "points")
+fontsize(lgd, 36, "points")
 legend boxoff
+box on
 ax = gca;
-ax.FontSize = f_size;
+ax.FontSize = 36;
 pos = get(gca, 'Position');
-pos(2) = 0.16; % Adjust the position of the subplot
-pos(4) = 0.3; % Adjust the height of the subplot
+% pos(2) = 0.16; % Adjust the position of the subplot
+pos(4) = hei; % Adjust the height of the subplot
 set(gca, 'Position', pos);
+yticks_old = get(gca, 'YTick');
+% Define the new tick values
+yticks_new = yticks_old * 10;
+% Set the new tick values to the y-axis
+set(gca, 'YTickLabel', yticks_new);
 
 %% Adaptive gain pos and angular
 
@@ -376,6 +399,7 @@ lgd = legend('$K_x$', '$K_y$', '$K_z$', 'Interpreter', 'latex', 'Orientation', '
 lgd.ItemTokenSize = [50, 28];
 fontsize(lgd, f_size, "points")
 legend boxoff
+box on
 set(gcf,'color','w');
 ax = gca;
 ax.FontSize = f_size;
@@ -394,6 +418,7 @@ lgd = legend('$K_\phi$', '$K_\theta$', '$K_\psi$', 'Interpreter', 'latex', 'Orie
 lgd.ItemTokenSize = [50, 28];
 fontsize(lgd, f_size, "points")
 legend boxoff
+box on
 set(gcf,'color','w');
 ax = gca;
 ax.FontSize = f_size;
@@ -415,11 +440,12 @@ lgd = legend('$K_x$', '$K_y$', '$K_z$', 'Interpreter', 'latex', 'Orientation', '
 lgd.ItemTokenSize = [50, 28];
 fontsize(lgd, f_size, "points")
 legend boxoff
+box on
 ax = gca;
 ax.FontSize = f_size;
 xticklabels({});  % Remove x-axis tick labels
 pos = get(gca, 'Position');
-pos(4) = 0.3; % Adjust the height of the subplot
+pos(4) = 0.4; % Adjust the height of the subplot
 set(gca, 'Position', pos);
 
 subplot(2,1,2);
@@ -434,11 +460,12 @@ lgd = legend('$K_\phi$', '$K_\theta$', '$K_\psi$', 'Interpreter', 'latex', 'Orie
 lgd.ItemTokenSize = [50, 28];
 fontsize(lgd, f_size, "points")
 legend boxoff
+box on
 ax = gca;
 ax.FontSize = f_size;
 pos = get(gca, 'Position');
 pos(2) = 0.16; % Adjust the position of the subplot
-pos(4) = 0.3; % Adjust the height of the subplot
+pos(4) = 0.4; % Adjust the height of the subplot
 set(gca, 'Position', pos);
 
 
@@ -449,9 +476,9 @@ error = out.errors.signals.values;
 
 figure('Name', 'Linear Errors', 'NumberTitle', 'off', 'WindowState', 'maximized');
 
-plot(time, error(:,1), 'LineStyle','-', 'LineWidth', 1, 'Color', 'blue')
+plot(time, error(:,1), 'LineStyle','-', 'LineWidth', 1, 'Color', 'red')
 hold on
-plot(time, error(:,2), 'LineStyle','--', 'LineWidth', 1, 'Color', 'red')
+plot(time, error(:,2), 'LineStyle','--', 'LineWidth', 1, 'Color', 'blue')
 plot(time, error(:,3), 'LineStyle','-.', 'LineWidth', 1, 'Color', 'black')
 hold off
 
@@ -465,61 +492,66 @@ lgd = legend('$e_x$', '$e_y$', '$e_z$', 'Interpreter', 'latex', 'Orientation', '
 lgd.ItemTokenSize = [50, 28];
 fontsize(lgd, f_size, "points")
 legend boxoff
+box on
 set(gcf,'color','w');
 ax = gca;
 ax.FontSize = f_size;
 
 %% Wind forces and wind vel
 
-wind_f = out.wind_model.signals.values;
-
-figure('Name', 'Wind forces', 'NumberTitle', 'off', 'WindowState', 'maximized');
-
-plot(time, wind_f(:,4), 'LineStyle','--', 'LineWidth', 1, 'Color', 'red')
-hold on
-plot(time, wind_f(:,5), 'LineStyle','-.', 'LineWidth', 1, 'Color', 'blue')
-plot(time, wind_f(:,6), 'LineStyle','-', 'LineWidth', 1, 'Color', 'black')
-hold off
-
-% disp(max(wind_f(:,4)))
-% disp(max(wind_f(:,5)))
-% disp(max(wind_f(:,6)))
-
-xlabel('Time (s)', 'Interpreter','latex')
-ylabel('Force (N)', 'Interpreter','latex')
-lgd = legend('$\delta_x$', '$\delta_y$', '$\delta_z$', 'Interpreter', 'latex', 'Orientation', 'horizontal', 'Location', 'best');
-lgd.ItemTokenSize = [50, 28];
-fontsize(lgd, f_size, 'points')
-legend boxoff
-set(gcf,'color','w');
-ax = gca;
-ax.FontSize = f_size;
-
-
-figure('Name', 'Wind velocities', 'NumberTitle', 'off', 'WindowState', 'maximized');
-
-plot(time, wind_f(:,1), 'LineStyle','-', 'LineWidth', 1, 'Color', 'blue')
-hold on
-plot(time, wind_f(:,2), 'LineStyle','--', 'LineWidth', 1, 'Color', 'red')
-plot(time, wind_f(:,3), 'LineStyle','-.', 'LineWidth', 1, 'Color', 'black')
-hold off
-
-% disp(max(wind_f(:,1)))
-% disp(max(wind_f(:,2)))
-% disp(max(wind_f(:,3)))
-
-xlabel('Time (s)', 'Interpreter','latex')
-ylabel('Velocities (m/s)', 'Interpreter','latex')
-lgd = legend('$v_x$', '$v_y$', '$v_z$', 'Interpreter', 'latex', 'Orientation', 'horizontal', 'Location', 'best');
-lgd.ItemTokenSize = [50, 28];
-fontsize(lgd, f_size, 'points')
-legend boxoff
-set(gcf,'color','w');
-ax = gca;
-ax.FontSize = f_size;
+% wind_f = out.wind_model.signals.values;
+% 
+% figure('Name', 'Wind forces', 'NumberTitle', 'off', 'WindowState', 'maximized');
+% 
+% plot(time, wind_f(:,4), 'LineStyle','--', 'LineWidth', 1, 'Color', 'red')
+% hold on
+% plot(time, wind_f(:,5), 'LineStyle','-.', 'LineWidth', 1, 'Color', 'blue')
+% plot(time, wind_f(:,6), 'LineStyle','-', 'LineWidth', 1, 'Color', 'black')
+% hold off
+% 
+% % disp(max(wind_f(:,4)))
+% % disp(max(wind_f(:,5)))
+% % disp(max(wind_f(:,6)))
+% 
+% xlabel('Time (s)', 'Interpreter','latex')
+% ylabel('Force (N)', 'Interpreter','latex')
+% lgd = legend('$\delta_x$', '$\delta_y$', '$\delta_z$', 'Interpreter', 'latex', 'Orientation', 'horizontal', 'Location', 'best');
+% lgd.ItemTokenSize = [50, 28];
+% fontsize(lgd, f_size, 'points')
+% legend boxoff
+% set(gcf,'color','w');
+% ax = gca;
+% ax.FontSize = f_size;
+% 
+% 
+% figure('Name', 'Wind velocities', 'NumberTitle', 'off', 'WindowState', 'maximized');
+% 
+% plot(time, wind_f(:,1), 'LineStyle','-', 'LineWidth', 1, 'Color', 'blue')
+% hold on
+% plot(time, wind_f(:,2), 'LineStyle','--', 'LineWidth', 1, 'Color', 'red')
+% plot(time, wind_f(:,3), 'LineStyle','-.', 'LineWidth', 1, 'Color', 'black')
+% hold off
+% 
+% % disp(max(wind_f(:,1)))
+% % disp(max(wind_f(:,2)))
+% % disp(max(wind_f(:,3)))
+% 
+% xlabel('Time (s)', 'Interpreter','latex')
+% ylabel('Velocities (m/s)', 'Interpreter','latex')
+% lgd = legend('$v_x$', '$v_y$', '$v_z$', 'Interpreter', 'latex', 'Orientation', 'horizontal', 'Location', 'best');
+% lgd.ItemTokenSize = [50, 28];
+% fontsize(lgd, f_size, 'points')
+% legend boxoff
+% set(gcf,'color','w');
+% ax = gca;
+% ax.FontSize = f_size;
 
 %% drag and wind in the same plot
 wind_f = out.wind_model.signals.values;
+
+time_limit = 10;
+tl_index = find(time > time_limit, 1);
+wind_f(1:tl_index, :) = 0; 
 
 figure('Name', 'Wind', 'NumberTitle', 'off', 'WindowState', 'maximized');
 
@@ -561,6 +593,8 @@ pos = get(gca, 'Position');
 pos(2) = 0.16; % Adjust the position of the subplot
 pos(4) = 0.4; % Adjust the height of the subplot
 set(gca, 'Position', pos);
+
+%% drag and wind, nothing before 10 s
 
 
 
