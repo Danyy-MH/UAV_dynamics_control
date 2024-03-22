@@ -13,6 +13,7 @@ Make sure to run the Simulink File before this file !!
 %}
 
 %% Desired trajectory
+
 des_traj = out.chi.signals.values(:, [2, 4, 6, 8, 10, 12]);
 time = out.tout;
 f_size = 48;
@@ -593,6 +594,14 @@ pos = get(gca, 'Position');
 pos(2) = 0.16; % Adjust the position of the subplot
 pos(4) = 0.4; % Adjust the height of the subplot
 set(gca, 'Position', pos);
+
+%% print maximum values
+max(wind_f(:, 1))
+max(wind_f(:, 2))
+max(wind_f(:, 3))
+max(wind_f(:, 4))
+max(wind_f(:, 5))
+max(wind_f(:, 6))
 
 %% drag and wind, nothing before 10 s
 
