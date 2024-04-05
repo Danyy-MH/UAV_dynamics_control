@@ -15,10 +15,10 @@ l = 0.27; % length m
 
 % t motor → 10 inch propeller data
 %Torque constant
-kQ = 2.120621719770643e-07;
+kQ = 2.1206e-07;
 
 %Thrust constant
-kT = 1.311483486380778e-05;
+kT = 1.3114e-05;
 
 alpha = [pi/6; -pi/6; -pi/2; -5*pi/6; 5*pi/6; pi/2];
 
