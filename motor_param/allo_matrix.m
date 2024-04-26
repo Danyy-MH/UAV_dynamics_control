@@ -7,6 +7,7 @@ format default
 Adan Marquez
 28-11-2023
 
+
 Allocation matrix calculation
 %}
 l = 0.27; % length m
