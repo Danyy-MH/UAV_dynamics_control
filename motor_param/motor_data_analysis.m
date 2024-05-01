@@ -7,7 +7,6 @@ Motor analysys using a Dynamometer
 %}
 
 clc
-clear
 close all
 format long
 
@@ -30,9 +29,8 @@ num_data = 26;
 
 pwm = file(1:num_data , 2);
 
-pwm_short = pwm(pwm >= 1050 & pwm <= 1990);
+pwm_short = pwm(pwm >= 1100 & pwm <= 1990);
 % pwm_short = pwm(pwm >= 1100 & pwm <= 1900);
-length(pwm_short)
 startIndex = find(pwm == pwm_short(1));
 endIndex = find(pwm == pwm_short(end));
 
@@ -67,7 +65,7 @@ pwm_linear_regression = pwm_lg * pwm_slope;
 
 %poly fit for omega square vs pwm
 
-degree = 2; % Choose the degree of the polynomial (e.g., 2 for quadratic)
+degree = 3; % Choose the degree of the polynomial (e.g., 2 for quadratic)
 omega_square_short = angular_vel_22(startIndex:endIndex);
 coefficients = polyfit(omega_square_short, pwm_short, degree); % Fit a polynomial to the data
 pwm_fit = polyval(coefficients, omega_square_short);
