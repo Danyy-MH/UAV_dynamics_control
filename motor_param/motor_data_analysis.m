@@ -15,6 +15,7 @@ format long
 
 % filename = "TMotor_1045.csv";
 filename = "Tmotor_1045_3004.csv";
+filename = "Tmotor_0205.csv";
 % filename = "EMAX_1045.csv";
 % filename = "VANTEC.csv";
 % filename = "multistar.csv";
