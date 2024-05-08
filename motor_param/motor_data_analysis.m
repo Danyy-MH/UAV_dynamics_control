@@ -13,8 +13,9 @@ format long
 %% Motor Analysis
 
 % filename = "TMotor_1045.csv";
-filename = "Tmotor_1045_3004.csv";
-filename = "Tmotor_0205.csv";
+% filename = "Tmotor_1045_3004.csv";
+filename = "Tmotor_3004.csv";
+% filename = "Tmotor_0205.csv";
 % filename = "EMAX_1045.csv";
 % filename = "VANTEC.csv";
 % filename = "multistar.csv";
@@ -30,7 +31,7 @@ num_data = 26;
 
 pwm = file(1:num_data , 2);
 
-pwm_short = pwm(pwm >= 1100 & pwm <= 1990);
+pwm_short = pwm(pwm >= 1050 & pwm <= 1990);
 % pwm_short = pwm(pwm >= 1100 & pwm <= 1900);
 startIndex = find(pwm == pwm_short(1));
 endIndex = find(pwm == pwm_short(end));
