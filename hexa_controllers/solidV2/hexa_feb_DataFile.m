@@ -1,3 +1,4 @@
+
 % Simscape(TM) Multibody(TM) version: 7.7
 
 % This is a model data file derived from a Simscape Multibody Import XML file using the smimport function.
