@@ -318,8 +318,10 @@ ax.FontSize = f_size ;
 
 %% UAV control inputs
 
-forces = out.forces.signals.values(:, 1:3);
-torques = out.forces.signals.values(:, 4:6);
+forces = squeeze(control.signals.values(1:3, 1, :));
+torques = squeeze(control.signals.values(4:6, 1, :));
+time = tout;
+
 hei = 0.29;
 
 figure('Name', 'Horizontal Forces and Torques', 'NumberTitle', 'off', 'WindowState', 'maximized', 'Color', 'w');
