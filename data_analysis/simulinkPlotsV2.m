@@ -123,22 +123,25 @@ pos(4) = 0.38; % Adjust the height of the subplot
 set(gca, 'Position', pos);
 
 %% Errors
-
-error = squeeze(errors.signals.values(1:6, 1, :));
+green      = '#06ad00';
+time = out.tout;
+error = squeeze(out.errors.signals.values(:, 1, :));
+% error = squeeze(errors.signals.values(1:6, 1, :));
 error = transpose(error);
+f_size = 24;
 
-figure('Name', 'Linear Errors', 'NumberTitle', 'off', 'WindowState', 'maximized');
+hfig = figure('Name', 'Linear Errors', 'NumberTitle', 'off');
+t = tiledlayout(2, 1, 'Padding','compact', 'TileSpacing','compact');
+t.Padding = "compact";
+t.TileSpacing = 'compact';
 
-subplot(2,1,1);
-plot(time, error(:,1), 'LineStyle','-', 'LineWidth', 1, 'Color', 'red')
+nexttile
+
+plot(time, error(:,1), 'LineStyle','-', 'LineWidth', 2, 'Color', 'red')
 hold on
-plot(time, error(:,2), 'LineStyle','--', 'LineWidth', 1, 'Color', 'blue')
-plot(time, error(:,3), 'LineStyle','-.', 'LineWidth', 1, 'Color', 'black')
+plot(time, error(:,2), 'LineStyle','--', 'LineWidth', 2, 'Color', 'blue')
+plot(time, error(:,3), 'LineStyle','-.', 'LineWidth', 2, 'Color', 'black')
 hold off
-% 
-% max(abs(error(:, 1)))
-% max(abs(error(:, 2)))
-% max(abs(error(:, 3)))
 
 xlabel('Time (s)', 'Interpreter','latex')
 ylabel('error (m)', 'Interpreter','latex')
@@ -151,21 +154,21 @@ set(gcf,'color','w');
 ax = gca;
 ax.FontSize = f_size;
 
-subplot(2,1,2);
-plot(time, error(:,4), 'LineStyle','-', 'LineWidth', 1, 'Color', 'red')
+nexttile
+
+plot(time, error(:,7), 'LineStyle','-', 'LineWidth', 2, 'Color', 'red')
 hold on
-plot(time, error(:,5), 'LineStyle','--', 'LineWidth', 1, 'Color', 'blue')
-plot(time, error(:,6), 'LineStyle','-.', 'LineWidth', 1, 'Color', 'black')
+plot(time, error(:,8), 'LineStyle','--', 'LineWidth', 2, 'Color', 'blue')
+plot(time, error(:,9), 'LineStyle','-.', 'LineWidth', 2, 'Color', 'black')
+plot(time, error(:,10), 'LineStyle',':', 'LineWidth', 2, 'Color', green)
 hold off
-% 
-% max(abs(error(:, 1)))
-% max(abs(error(:, 2)))
-% max(abs(error(:, 3)))
 
 xlabel('Time (s)', 'Interpreter','latex')
 ylabel('error (rad)', 'Interpreter','latex')
-lgd = legend('$e_\phi$', '$e_\theta$', '$e_\psi$', 'Interpreter', 'latex', 'Orientation', 'horizontal', 'Location', 'best');
+lgd = legend('$q_1$', '$q_2$', '$q_3$', '$q_4$', 'Interpreter', 'latex', 'Orientation', 'horizontal', 'Location', 'best');
 lgd.ItemTokenSize = [50, 28];
+lgd.ItemHitFcn = @hitcallback;
+
 fontsize(lgd, f_size, "points")
 legend boxoff
 box on
@@ -173,12 +176,22 @@ set(gcf,'color','w');
 ax = gca;
 ax.FontSize = f_size;
 
+set(findall(hfig, '-property', 'FontSize'), 'FontSize', 32)
+set(findall(hfig, '-property', 'Box'), 'Box', 'off')
+set(findall(hfig, '-property', 'Interpreter'), 'Interpreter', 'latex')
+set(findall(hfig, '-property', 'TickLabelInterpreter'), 'TickLabelInterpreter', 'latex')
+
+picturewidth = 30;
+hw_ratio = 1.2;
+set(hfig,'Units','centimeters','Position',[3 3 picturewidth hw_ratio*picturewidth])
+
 %% Estimation erros
 close all
 
+time = out.tout;
+
 e_hat = squeeze(est_e.signals.values(1:6, 1, :));
 e_hat = transpose(e_hat);
-time = tout;
 f_size = 24;
 
 figure('Name', 'Estimation Errors', 'NumberTitle', 'off', 'WindowState', 'maximized');
@@ -190,9 +203,7 @@ plot(time, e_hat(:,2), 'LineStyle','--', 'LineWidth', 1, 'Color', 'blue')
 plot(time, e_hat(:,3), 'LineStyle','-.', 'LineWidth', 1, 'Color', 'black')
 hold off
 % 
-% max(abs(error(:, 1)))
-% max(abs(error(:, 2)))
-% max(abs(error(:, 3)))
+
 
 xlabel('Time [s]', 'Interpreter','latex')
 ylabel('Estimation error [m]', 'Interpreter','latex')
@@ -250,3 +261,13 @@ plot(time, e_hat(:, 6), 'LineWidth', 1, 'Color', 'black', 'LineStyle','-.');
 hold off
 grid on
 axis([0 1 -0.03 0.08])
+
+%% Toggle Function
+
+function hitcallback(src,evnt)
+    if strcmp(evnt.Peer.Visible,'on')
+        evnt.Peer.Visible = 'off';
+    else 
+        evnt.Peer.Visible = 'on';
+    end
+end

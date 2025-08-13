@@ -10,24 +10,38 @@ close all
 format long
 
 %% File manager
-
+clc
 green      = '#06ad00';
+orange     = '#ff8000';
 
 % filename = "Tmotor_3004.csv"; %nel
 % filename = "Tmotor_0205.csv"; %nel
 % filename = "TMotor_1045_1411_2";
-filename = "TMotor_1002_4S_ESC";
+filename = "Tmotor_07020_4S";
 
 % matrix form
 file = readmatrix(filename);
 dataLength = length(file(:, 1));
-startIndex = 26;
-endIndex = dataLength - 8;
-dataNum = endIndex - startIndex + 1;
+% startIndex = 340;
+% endIndex = dataLength - 138;
 
 % select rows for pwm, thurst, torque, rad2/s
 
-pwm = file(startIndex:endIndex, 2);
+% pwm = file(startIndex:endIndex, 2);
+time = file(:, 1);
+
+tf = 38.3516 - 2;
+t0 = tf - 30;
+
+[~, tf_i] = min(abs(time - tf));
+[~, t0_i] = min(abs(time - t0));
+
+startIndex = t0_i;
+endIndex = tf_i;
+% length(time)
+dataNum = endIndex - startIndex + 1;
+
+pwm = linspace(1000, 2000, dataNum)';
 torque = file(startIndex:endIndex, 9);
 thrust = file(startIndex:endIndex, 10);
 % positive thrust and torque
@@ -57,8 +71,10 @@ linearRegTorque = linearRegOmegaSquare * torqueSlope;
 %polyfit of omega2 and pwm
 degree = 2;
 coeff = polyfit(omegaSquare, pwm, degree);
-fprintf('Polyfit of Angular Vel Square vs PWM')
-disp(coeff)
+fprintf('Polyfit of Angular Vel Square vs PWM: \n')
+disp(coeff(1))
+disp(coeff(2))
+disp(coeff(3))
 pwmPolyfit = polyval(coeff, omegaSquare);
 
 
@@ -69,6 +85,10 @@ fprintf('Polyfit of  PWM vs Angular Vel Square')
 disp(coeff2)
 OmegaPolyfit = polyval(coeff2, pwm);
 
+%% Time plotting
+
+% plot(time, file(:, 10))
+% plot(time, file(:, 9))
 %% Plotting
 
 fontSize = 14;
@@ -109,21 +129,23 @@ nexttile
 
 % caption = sprintf('$\Omega^2$ vs PWM');
 omega2 = omegaSquare;
-pwm1 = -0.000000000000327 * 1e3 * omega2 .^ 2 + 0.000001038936810 * 1e3 * omega2 + 1132.8616;
-pwm2 = -0.000000000000288  * 1e3 * omega2 .^ 2 + 0.000000979286229 * 1e3 * omega2 + 1136.1732;
+% pwm2 = -0.278e-09 .* omega2 .* omega2 + 0.0011936 .* omega2 + 1114.2273;
+% pwm2 = -0.441e-09 .* omega2 .* omega2 + 0.0013486 .* omega2 + 1118.858;
+pwm3 = -1.126e-09 .* omega2 .* omega2 + 0.002147 .* omega2 + 1061.2811;
+pwm4 = -0.000000001230 .* omega2 .^ 2 + 0.0024128 .* omega2 + 1077.8577;
 pwm5 = coeff(1) .* omega2 .^ 2 + coeff(2) .* omega2 + coeff(3);
 
 % plot(omegaSquare, pwm2, 'LineStyle','-', 'LineWidth',2, 'Color',"red")
 plot(omegaSquare, pwm, 'LineStyle','-', 'LineWidth',2, 'Color',"red")
 hold on
-plot(omegaSquare, pwm1, 'LineStyle','--', 'LineWidth',2, 'Color', "blue")
-plot(omegaSquare, pwm2, 'LineStyle','--', 'LineWidth',2, 'Color', green)
-plot(omegaSquare, pwm5, 'LineStyle','--', 'LineWidth',2, 'Color', "black")
+plot(omegaSquare, pwm4, 'LineStyle','--', 'LineWidth',2, 'Color', green)
+plot(omegaSquare, pwm3, 'LineStyle','--', 'LineWidth',2, 'Color', "black")
+plot(omegaSquare, pwm5, 'LineStyle','--', 'LineWidth',2, 'Color', orange)
 hold off
 title('$\Omega^2$ vs PWM','interpreter','latex')
 xlabel('$\omega^2$ $[$rad$^2/$s$^2] $')
 ylabel('PWM [us]')
-lgd = legend('Data', 'Fit 0702', 'Fit 1002', 'Current Fit', 'Location','best');
+lgd = legend('Data', 'PolyFitPx4', 'PolyFit', 'Actual', 'Location','best');
 lgd.ItemHitFcn = @hitcallback;
 
 nexttile
@@ -134,7 +156,7 @@ plot(pwm, OmegaPolyfit, 'LineStyle','--', 'LineWidth',2, 'Color',"black")
 hold off
 title('PWM vs $\Omega^2$','interpreter','latex')
 xlabel('pwm', 'FontSize', fontSize)
-ylabel('$\Omega^2$', 'FontSize', fontSize)
+ylabel('$\omega^2$', 'FontSize', fontSize)
 lgd = legend('Data', 'Polyfit', 'Location','best');
 lgd.ItemHitFcn = @hitcallback;
 
@@ -156,60 +178,60 @@ set(hfig,'Units','centimeters','Position',[3 3 picturewidth hw_ratio*picturewidt
 
 %% Allocation Matrix Calculation
 
-alpha = [pi/6; -pi/6; -pi/2; -5*pi/6; 5*pi/6; pi/2];
-l = 0.27;
-varphi = pi/9;
- 
-m11 = -kT*cos(alpha(1))*sin(varphi);
-m21 = kT*sin(alpha(1))*sin(varphi);
-m31 = kT*cos(varphi);
-m41 = cos(alpha(1))*(l*kT*cos(varphi) - kQ*sin(varphi));
-m51 = sin(alpha(1))*(-l*kT*cos(varphi) + kQ*sin(varphi));
-m61 = l*kT*sin(varphi) + kQ*cos(varphi);
+% alpha = [pi/6; -pi/6; -pi/2; -5*pi/6; 5*pi/6; pi/2];
+% l = 0.27;
+% varphi = pi/9;
+% 
+% m11 = -kT*cos(alpha(1))*sin(varphi);
+% m21 = kT*sin(alpha(1))*sin(varphi);
+% m31 = kT*cos(varphi);
+% m41 = cos(alpha(1))*(l*kT*cos(varphi) - kQ*sin(varphi));
+% m51 = sin(alpha(1))*(-l*kT*cos(varphi) + kQ*sin(varphi));
+% m61 = l*kT*sin(varphi) + kQ*cos(varphi);
+% 
+% m12 = kT*cos(alpha(2))*sin(varphi);
+% m22 = -kT*sin(alpha(2))*sin(varphi);
+% m32 = m31;
+% m42 = cos(alpha(2))*(l*kT*cos(varphi) - kQ*sin(varphi));
+% m52 = sin(alpha(2))*(-l*kT*cos(varphi) + kQ*sin(varphi));
+% m62 = -l*kT*sin(varphi) - kQ*cos(varphi);
+% 
+% m13 = kT*cos(alpha(3))*sin(varphi);
+% m23 = kT*sin(alpha(3))*sin(varphi);
+% m33 = m31;
+% m43 = cos(alpha(3))*(l*kT*cos(varphi) + kQ*sin(varphi));
+% m53 = sin(alpha(3))*(-l*kT*cos(varphi) + kQ*sin(varphi));
+% m63 = l*kT*sin(varphi) + kQ*cos(varphi);
+% 
+% m14 = kT*cos(alpha(4))*sin(varphi);
+% m24 = -kT*sin(alpha(4))*sin(varphi);
+% m34 = m31;
+% m44 = cos(alpha(4))*(l*kT*cos(varphi) - kQ*sin(varphi));
+% m54 = sin(alpha(4))*(-l*kT*cos(varphi) + kQ*sin(varphi));
+% m64 = -l*kT*sin(varphi) - kQ*cos(varphi);
+% 
+% m15 = -kT*cos(alpha(5))*sin(varphi);
+% m25 = kT*sin(alpha(5))*sin(varphi);
+% m35 = m31;
+% m45 = cos(alpha(5))*(l*kT*cos(varphi) - kQ*sin(varphi));
+% m55 = sin(alpha(5))*(-l*kT*cos(varphi) + kQ*sin(varphi));
+% m65 = l*kT*sin(varphi) + kQ*cos(varphi);
+% 
+% m16 = kT*cos(alpha(6))*sin(varphi);
+% m26 = -kT*sin(alpha(6))*sin(varphi);
+% m36 = m31;
+% m46 = cos(alpha(6))*(l*kT*cos(varphi) + kQ*sin(varphi));
+% m56 = sin(alpha(6))*(-l*kT*cos(varphi) + kQ*sin(varphi));
+% m66 = -l*kT*sin(varphi) - kQ*cos(varphi);
+% 
+% allo = [m11, m12, m13, m14, m15, m16;
+%         m21, m22, m23, m24, m25, m26;
+%         m31, m32, m33, m34, m35, m36;
+%         m41, m42, m43, m44, m45, m46;
+%         m51, m52, m53, m54, m55, m56;
+%         m61, m62, m63, m64, m65, m66];
 
-m12 = kT*cos(alpha(2))*sin(varphi);
-m22 = -kT*sin(alpha(2))*sin(varphi);
-m32 = m31;
-m42 = cos(alpha(2))*(l*kT*cos(varphi) - kQ*sin(varphi));
-m52 = sin(alpha(2))*(-l*kT*cos(varphi) + kQ*sin(varphi));
-m62 = -l*kT*sin(varphi) - kQ*cos(varphi);
-
-m13 = kT*cos(alpha(3))*sin(varphi);
-m23 = kT*sin(alpha(3))*sin(varphi);
-m33 = m31;
-m43 = cos(alpha(3))*(l*kT*cos(varphi) + kQ*sin(varphi));
-m53 = sin(alpha(3))*(-l*kT*cos(varphi) + kQ*sin(varphi));
-m63 = l*kT*sin(varphi) + kQ*cos(varphi);
-
-m14 = kT*cos(alpha(4))*sin(varphi);
-m24 = -kT*sin(alpha(4))*sin(varphi);
-m34 = m31;
-m44 = cos(alpha(4))*(l*kT*cos(varphi) - kQ*sin(varphi));
-m54 = sin(alpha(4))*(-l*kT*cos(varphi) + kQ*sin(varphi));
-m64 = -l*kT*sin(varphi) - kQ*cos(varphi);
-
-m15 = -kT*cos(alpha(5))*sin(varphi);
-m25 = kT*sin(alpha(5))*sin(varphi);
-m35 = m31;
-m45 = cos(alpha(5))*(l*kT*cos(varphi) - kQ*sin(varphi));
-m55 = sin(alpha(5))*(-l*kT*cos(varphi) + kQ*sin(varphi));
-m65 = l*kT*sin(varphi) + kQ*cos(varphi);
-
-m16 = kT*cos(alpha(6))*sin(varphi);
-m26 = -kT*sin(alpha(6))*sin(varphi);
-m36 = m31;
-m46 = cos(alpha(6))*(l*kT*cos(varphi) + kQ*sin(varphi));
-m56 = sin(alpha(6))*(-l*kT*cos(varphi) + kQ*sin(varphi));
-m66 = -l*kT*sin(varphi) - kQ*cos(varphi);
-
-allo = [m11, m12, m13, m14, m15, m16;
-        m21, m22, m23, m24, m25, m26;
-        m31, m32, m33, m34, m35, m36;
-        m41, m42, m43, m44, m45, m46;
-        m51, m52, m53, m54, m55, m56;
-        m61, m62, m63, m64, m65, m66];
-
-allo_i = pinv(allo);
+% allo_i = pinv(allo);
 % fprintf('Allocation matrix:')
 % disp(allo)
 % fprintf('Inverse Allocation matrix:')

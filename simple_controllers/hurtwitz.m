@@ -1,9 +1,9 @@
 clc
-clear
+% clear
 close all
 
 % Example usage:
-coefficients = [1, 36, 90, 250]; % Adjust coefficients as needed
+coefficients = [1, 5, 8, 16]; % Adjust coefficients as needed
 isPolynomialHurwitz(coefficients);
 
 function isHurwitz = isPolynomialHurwitz(coeffs)
